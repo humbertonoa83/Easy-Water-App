@@ -9,6 +9,7 @@ import android.os.CountDownTimer;
 import android.view.WindowManager;
 
 import hp.com.planoalimentar.easy_water_app.R;
+import hp.com.planoalimentar.easy_water_app.auth.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -33,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void onFinish () {
-                intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
                 finish();

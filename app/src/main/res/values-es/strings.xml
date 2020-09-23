@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Easy Water</string>
+    <string name="login">" Iniciar sesión Iniciar sesión"</string>
+    <string name="hint_email">Introduce tu correo Electrónico</string>
+    <string name="hint_password">Introducir la contraseña</string>
 </resources>

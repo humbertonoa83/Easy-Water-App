@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -12,12 +12,26 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name= "android:textViewStyle" >@style/TextViewStyle</item>
+        <item name= "android:buttonStyle" >@style/ButtonStyle</item>
+        <item name="android:editTextPreferenceStyle">@style/MaterialEditTextStyle</item>
     </style>
 
     <!-- This is a Transparent Theme -->
     <style name="AppTheme.Transparent">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name= "TextViewStyle" parent= "android:Widget.TextView" >
+        <item name= "android:fontFamily">sans-serif</item>
+    </style>
+    <style name="MaterialEditTextStyle" parent="android:Widget.Material.EditText">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name= "ButtonStyle" parent= "android:Widget.Holo.Button" >
+        <item name= "android:fontFamily" > sans-serif</item>
     </style>
 
 </resources>
