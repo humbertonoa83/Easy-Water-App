@@ -11,6 +11,12 @@ import android.view.WindowManager;
 import hp.com.planoalimentar.easy_water_app.R;
 import hp.com.planoalimentar.easy_water_app.auth.LoginActivity;
 
+/**
+ * This is a product created by AEISUTC Team on
+ * Matyanga Project concurs
+ * Created by humbertonoa83@gmail.com on 21/09/2020.
+ */
+
 public class SplashActivity extends AppCompatActivity {
 
     private CountDownTimer countDownTimer;

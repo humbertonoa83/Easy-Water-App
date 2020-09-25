@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+        <item android:id="@+id/painel"
+            android:title="@string/label_painel">
+        <!--  Vai mostrar os meus ultimos dados, malta ultimos pagamentos, ultimos gastos e tal-->
+            <menu>
+                <group android:checkableBehavior="single">
+                <item android:id="@+id/mydatas"
+                    android:title="@string/label_mydatas"
+                    android:icon="@drawable/ic_data_usage"></item>
+
+
+                <item android:id="@+id/breakdown"
+                    android:title="@string/label_breakdown"
+                    android:icon="@drawable/ic_adjust"></item>
+                </group>
+            </menu>
+        </item>
+
+
+
+        <item android:id="@+id/recharger"
+            android:title="@string/label_recharger">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item android:id="@+id/create_recharger"
+                    android:title="@string/label_create_recharger"
+                    android:icon="@drawable/ic_credit_card_black_24dp">
+                </item>
+
+                <item android:id="@+id/second_copy"
+                    android:title="@string/label_second_copy"
+                    android:icon="@drawable/ic_copy">
+                </item>
+                </group>
+            </menu>
+        </item>
+
+</menu>

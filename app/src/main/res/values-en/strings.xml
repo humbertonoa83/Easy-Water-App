@@ -3,4 +3,10 @@
     <string name="login">Login</string>
     <string name="hint_email">Enter your email</string>
     <string name="hint_password">Enter password</string>
+    <string name="label_breakdown">Breakdown</string>
+    <string name="label_recharger">Recharge</string>
+    <string name="label_second_copy">Second copy</string>
+    <string name="label_create_recharger">" Buy Refill"</string>
+    <string name="label_mydatas">My Data</string>
+    <string name="label_painel">Painel</string>
 </resources>

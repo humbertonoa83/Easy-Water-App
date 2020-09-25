@@ -1,7 +1,18 @@
 <resources>
+    <!-- Don't alteer these Strings -->
     <string name="app_name" translatable="false">Easy Water</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <!---  -->
+
     <string name="login">Iniciar sessão</string>
     <string name="hint_email">Introduza o seu email</string>
     <string name="hint_password">Introduza a palavra-passe</string>
+    <string name="label_breakdown">Avaria</string>
+    <string name="label_recharger">Recarga</string>
+    <string name="label_second_copy">Segunda via</string>
+    <string name="label_create_recharger">Comprar Recarga</string>
+    <string name="label_mydatas">Meus dados</string>
+    <string name="label_painel">Painel</string>
 
 </resources>

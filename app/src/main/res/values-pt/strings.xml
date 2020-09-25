@@ -3,4 +3,10 @@
     <string name="login">Iniciar sessão</string>
     <string name="hint_email">Introduza o seu email</string>
     <string name="hint_password">Introduza a palavra-passe</string>
+    <string name="label_breakdown">Avaria</string>
+    <string name="label_recharger">Recarga</string>
+    <string name="label_second_copy">Segunda via</string>
+    <string name="label_create_recharger">Comprar Recarga</string>
+    <string name="label_mydatas">Meus dados</string>
+    <string name="label_painel">Painel</string>
 </resources>
