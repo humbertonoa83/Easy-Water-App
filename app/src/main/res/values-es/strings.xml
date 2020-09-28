@@ -9,4 +9,23 @@
     <string name="label_create_recharger">" Comprar Recarga"</string>
     <string name="label_mydatas">Mis datos</string>
     <string name="label_painel">Panel</string>
+    <string name="label_profile">" Perfil"</string>
+    <string name="label_name">Nombre</string>
+    <string name="label_client_name">Nombre del cliente</string>
+    <string name="label_email">Correo Electrónico</string>
+    <string name="label_tel">Contactos</string>
+    <string name="label_personal_information">" Informaciones personales"</string>
+    <string name="label_document">Documento</string>
+    <string name="label_issue_date">" Fecha de emisión"</string>
+    <string name="label_valid_date">" Válido hasta"</string>
+    <string name="label_issue_place">" Lugar de emisión"</string>
+    <string name="label_province">" Provincia"</string>
+    <string name="label_city">" Ciudad"</string>
+    <string name="label_district">" Distrito"</string>
+    <string name="label_neighborhood">" Barrio"</string>
+    <string name="label_street">Calle</string>
+    <string name="label_avenue">" Avenida"</string>
+    <string name="label_house">Casa</string>
+    <string name="label_block">Bloquear</string>
+    <string name="label_address">Morada</string>
 </resources>

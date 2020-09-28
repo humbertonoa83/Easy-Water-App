@@ -17,29 +17,29 @@
         app:menu="@menu/main_menu"
         android:layout_gravity="start"/>
 
-   <ScrollView
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
 
-       <androidx.constraintlayout.widget.ConstraintLayout
+       <RelativeLayout
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:background="@color/white">
 
            <androidx.appcompat.widget.Toolbar
                android:id="@+id/toolbar"
-               android:layout_width="0dp"
-               android:background="#3F51B5"
+               android:layout_width="match_parent"
+               android:background="@color/colorPrimaryDark"
                android:layout_height="wrap_content"
+               app:titleTextColor="@color/white"
                android:theme="?attr/actionBarTheme"
                android:minHeight="?attr/actionBarSize"
-               app:layout_constraintEnd_toEndOf="parent"
-               app:layout_constraintStart_toStartOf="parent"
-               app:layout_constraintTop_toTopOf="parent"
                app:navigationIcon="@drawable/ic_menu"/>
 
-       </androidx.constraintlayout.widget.ConstraintLayout>
+           <FrameLayout
+               android:id="@+id/frame_layout"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_below="@id/toolbar"/>
 
-   </ScrollView>
+       </RelativeLayout>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

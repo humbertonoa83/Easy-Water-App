@@ -9,4 +9,23 @@
     <string name="label_create_recharger">" Buy Refill"</string>
     <string name="label_mydatas">My Data</string>
     <string name="label_painel">Painel</string>
+    <string name="label_profile">Profile</string>
+    <string name="label_name">Name</string>
+    <string name="label_client_name">Client name</string>
+    <string name="label_email">Email</string>
+    <string name="label_tel">" Contacts"</string>
+    <string name="label_personal_information">Personal Informations</string>
+    <string name="label_document">Document</string>
+    <string name="label_issue_date">Date of issue</string>
+    <string name="label_valid_date">" Valid until"</string>
+    <string name="label_issue_place">" Place of issue"</string>
+    <string name="label_province">Province</string>
+    <string name="label_city">City</string>
+    <string name="label_district">District</string>
+    <string name="label_neighborhood">Neighborhood</string>
+    <string name="label_street">Street</string>
+    <string name="label_avenue">Avenue</string>
+    <string name="label_house">House</string>
+    <string name="label_block">Block</string>
+    <string name="label_address">Address</string>
 </resources>

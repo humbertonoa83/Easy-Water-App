@@ -24,14 +24,14 @@
     </style>
 
     <style name= "TextViewStyle" parent= "android:Widget.TextView" >
-        <item name= "android:fontFamily">sans-serif</item>
+        <item name= "android:fontFamily">sans-serif-light</item>
     </style>
     <style name="MaterialEditTextStyle" parent="android:Widget.Material.EditText">
-        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif-light</item>
     </style>
 
     <style name= "ButtonStyle" parent= "android:Widget.Holo.Button" >
-        <item name= "android:fontFamily" > sans-serif</item>
+        <item name= "android:fontFamily" > sans-serif-light</item>
     </style>
 
 </resources>

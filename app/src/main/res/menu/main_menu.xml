@@ -8,6 +8,10 @@
         <!--  Vai mostrar os meus ultimos dados, malta ultimos pagamentos, ultimos gastos e tal-->
             <menu>
                 <group android:checkableBehavior="single">
+                    <item android:id="@+id/profile"
+                        android:title="@string/label_profile"
+                        android:icon="@drawable/ic_account"></item>
+
                 <item android:id="@+id/mydatas"
                     android:title="@string/label_mydatas"
                     android:icon="@drawable/ic_data_usage"></item>
@@ -17,6 +21,9 @@
                     android:title="@string/label_breakdown"
                     android:icon="@drawable/ic_adjust"></item>
                 </group>
+
+
+
             </menu>
         </item>
 
