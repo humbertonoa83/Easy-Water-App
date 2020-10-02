@@ -17,7 +17,6 @@
     <string name="label_profile">Perfil</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="label_name">Nome</string>
     <string name="label_client_name">Nome do cliente</string>
     <string name="label_email">Email</string>
@@ -36,5 +35,19 @@
     <string name="label_house">Casa</string>
     <string name="label_block">Quarteirão</string>
     <string name="label_address">Endereço</string>
+    <string name="report_breakdown">Relatar avaria</string>
+    <string name="label_breakdown_cause">Causa da avaria</string>
+    <string name="label_breakdown_description">Descrição detalhada da avaria</string>
+    <string name="label_send">Enviar</string>
+    <string name="label_breakdown_type">Tipo de avaria</string>
+    <string name="label_breakdown_date">Data da avaria</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_my_statistics">Minhas estatísticas</string>
+    <string name="last_month">Último mês</string>
+    <string name="label_amount">Quantidade</string>
+    <string name="label_value">Valor</string>
+    <string name="label_this_year">Ano Actual</string>
+    <string name="label_spent_month">Mês com mais gastos</string>
 
 </resources>

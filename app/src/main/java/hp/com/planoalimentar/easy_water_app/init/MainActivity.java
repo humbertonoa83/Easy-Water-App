@@ -8,16 +8,15 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.viewpager.widget.ViewPager;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.WindowManager;
 
 import com.google.android.material.navigation.NavigationView;
 
 import hp.com.planoalimentar.easy_water_app.R;
+import hp.com.planoalimentar.easy_water_app.breakdown.BreakdownFragment;
+import hp.com.planoalimentar.easy_water_app.client.datas.ClientDataFragment;
 import hp.com.planoalimentar.easy_water_app.profile.ProfileFragment;
 import hp.com.planoalimentar.easy_water_app.recharger.BuyRecharger;
 
@@ -82,6 +81,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.profile:
                 fragmentClass = ProfileFragment.class;
+                break;
+
+            case R.id.breakdown:
+                fragmentClass = BreakdownFragment.class;
+                break;
+
+            case R.id.mydatas:
+                fragmentClass = ClientDataFragment.class;
                 break;
 
             default:;
