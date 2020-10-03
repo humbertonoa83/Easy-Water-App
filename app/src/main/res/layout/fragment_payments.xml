@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".payments.payments">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_pagamento_codigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative2"
+                android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/ic_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_person_black_24dp"
+                        app:layout_constraintBottom_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/label_codigo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/pagamento_codigo"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/txt_pagamento_codigo"
+                        app:layout_constraintLeft_toRightOf="@+id/ic_person" />
+
+                    <TextView
+                        android:id="@+id/txt_pagamento_codigo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/label_codigo"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintLeft_toRightOf="@+id/ic_person"
+                        app:layout_constraintTop_toBottomOf="@+id/label_codigo" />
+
+                    <EditText
+                        android:id="@+id/et_pagamento_codigo"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="30dp"
+                        android:maxLength="15"
+                        android:hint="ex: ADM123"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@+id/ic_person"
+                        app:layout_constraintTop_toBottomOf="@+id/label_codigo">
+                    </EditText>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_pagamento_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_pagamento_codigo"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person_pagamento_nome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_pagamento_nome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/pagamento_nome"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt__pagamento_nome"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_pagamento_nome" />
+
+                <TextView
+                    android:id="@+id/txt__pagamento_nome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_pagamento_nome"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_pagamento_nome"
+                    app:layout_constraintTop_toBottomOf="@+id/label_pagamento_nome" />
+
+                <EditText
+                    android:id="@+id/et_pagamento_nome"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:maxLength="15"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="ex: Jamal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_pagamento_nome"
+                    app:layout_constraintTop_toBottomOf="@+id/label_pagamento_nome">
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_pagamento_exibir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_pagamento_codigo"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:gravity="right"
+                    tools:ignore="MissingConstraints">
+                    <Button
+                        android:id="@+id/btn_pagamento_exibir"
+                        android:layout_width="40dp"
+                        android:background="@drawable/ic_baseline_add_box_24"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:layout_height="wrap_content"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_pagamento_lista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_pagamento_nome"
+                android:padding="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_payments"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_pagamento_submeter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_pagamento_lista"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/btn_submeter_pagamento"
+                    android:layout_width="match_parent"
+                    android:text="@string/pagamento_submeter"
+                    android:textStyle="bold"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

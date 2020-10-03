@@ -28,4 +28,6 @@
     <string name="label_house">Maison</string>
     <string name="label_block">Bloquer</string>
     <string name="label_address">Address</string>
+    <string name="label_add">record</string>
+    <string name="label_client">client</string>
 </resources>

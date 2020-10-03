@@ -28,4 +28,7 @@
     <string name="label_house">Casa</string>
     <string name="label_block">Quarteirão</string>
     <string name="label_address">Endereço</string>
+
+    <string name="label_add">Registro</string>
+    <string name="label_client">cliente</string>
 </resources>

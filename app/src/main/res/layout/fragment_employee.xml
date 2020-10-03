@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".employee.employee">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_funcionario_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative2"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_nome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/funcionario_nome"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_employee_name"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person" />
+
+                <TextView
+                    android:id="@+id/txt_employee_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_nome"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person"
+                    app:layout_constraintTop_toBottomOf="@+id/label_nome" />
+
+                <EditText
+                    android:id="@+id/et_funcionario_nome"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:maxLength="15"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="ex:Chelton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person"
+                    app:layout_constraintTop_toBottomOf="@+id/label_nome">
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_funcionario_apelido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_funcionario_nome"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person_funcionario_apelido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_funcionario_apelido"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/funcionario_apelido"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_funcionario_apelido"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_apelido" />
+
+                <TextView
+                    android:id="@+id/txt_funcionario_apelido"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_funcionario_apelido"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_apelido"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_apelido" />
+
+                <EditText
+                    android:id="@+id/et_funcionario_apelido"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:maxLength="15"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="ex: Sitoe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_apelido"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_apelido">
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_funcionario_bi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_funcionario_apelido"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person_funcionario_bi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_funcionario_bi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/funcionario_bi"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_funcionario_bi"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_bi" />
+
+                <TextView
+                    android:id="@+id/txt_funcionario_bi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_funcionario_bi"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_bi"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_bi" />
+
+                <EditText
+                    android:id="@+id/et_funcionario_bi"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:maxLength="15"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="ex: 123321221122221a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_bi"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_bi">
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_funcionario_cidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_funcionario_bi"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person_funcionario_cidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_funcionario_cidade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/funcionario_cidade"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_funcionario_cidade"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_cidade" />
+
+                <TextView
+                    android:id="@+id/txt_funcionario_cidade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_funcionario_cidade"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_cidade"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_cidade" />
+
+                <EditText
+                    android:id="@+id/et_funcionario_cidade"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:maxLength="15"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="ex: Maputo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_cidade"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_cidade">
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_funcionario_bairro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_funcionario_cidade"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person_funcionario_bairro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_funcionario_bairro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/funcionario_bairro"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_funcionario_bairro"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_bairro" />
+
+                <TextView
+                    android:id="@+id/txt_funcionario_bairro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_funcionario_bairro"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_bairro"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_bairro" />
+
+                <EditText
+                    android:id="@+id/et_funcionario_bairro"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:maxLength="15"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="ex: Magoanine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_bairro"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_bairro">
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_funcionario_distrito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_funcionario_bairro"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person_funcionario_distrito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_funcionario_distrito"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/funcionario_distrito"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_funcionario_distrito"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_distrito" />
+
+                <TextView
+                    android:id="@+id/txt_funcionario_distrito"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_funcionario_distrito"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_distrito"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_distrito" />
+
+                <EditText
+                    android:id="@+id/et_funcionario_distrito"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:maxLength="15"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="ex: Ka Mavota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_distrito"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_distrito">
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_funcionario_telefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_funcionario_distrito"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person_funcionario_telefone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_funcionario_telefone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/funcionario_telefone"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_funcionario_telefone"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_telefone" />
+
+                <TextView
+                    android:id="@+id/txt_funcionario_telefone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_funcionario_telefone"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_telefone"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_telefone" />
+
+                <EditText
+                    android:id="@+id/et_funcionario_telefone"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:maxLength="9"
+                    android:inputType="number"
+                    android:hint="ex: 831234561"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_telefone"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_telefone">
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_funcionario_cargo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_funcionario_telefone"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person_funcionario_cargo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_funcionario_cargo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/funcionario_cargo"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_funcionario_cargo"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_cargo" />
+
+                <TextView
+                    android:id="@+id/txt_funcionario_cargo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_funcionario_cargo"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_cargo"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_cargo" />
+
+                <Spinner
+                    android:id="@+id/sp_funcionario_cargo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_cargo"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_cargo">
+                </Spinner>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_funcionario_posto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_funcionario_cargo"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person_funcionario_posto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_funcionario_posto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/funcionario_posto"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_funcionario_posto"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_posto" />
+
+                <TextView
+                    android:id="@+id/txt_funcionario_posto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_funcionario_posto"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_posto"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_posto" />
+
+                <EditText
+                    android:id="@+id/et_funcionario_posto"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:maxLength="9"
+                    android:inputType="number"
+                    android:hint="ex: Mahotas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_posto"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_posto">
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_funcionario_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_funcionario_posto"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person_funcionario_senha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_funcionario_senha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/funcionario_senha"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_funcionario_senha"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_senha" />
+
+                <TextView
+                    android:id="@+id/txt_funcionario_senha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_funcionario_senha"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_senha"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_senha" />
+
+                <EditText
+                    android:id="@+id/et_funcionario_senha"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:maxLength="15"
+                    android:hint="ex: ************"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_senha"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_senha">
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_funcionario_confirmar_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_funcionario_senha"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person_funcionario_confirmar_senha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_funcionario_confirmar_senha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/funcionario_confirmar_senha"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_funcionario_confirmar_senha"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_confirmar_senha" />
+
+                <TextView
+                    android:id="@+id/txt_funcionario_confirmar_senha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_funcionario_confirmar_senha"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_confirmar_senha"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_confirmar_senha" />
+
+                <EditText
+                    android:id="@+id/et_funcionario_confirmar_senha"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:maxLength="15"
+                    android:hint="ex: ***********"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_funcionario_confirmar_senha"
+                    app:layout_constraintTop_toBottomOf="@+id/label_funcionario_confirmar_senha">
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_submeter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_funcionario_confirmar_senha"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/btn_submeter_funcionario"
+                    android:layout_width="match_parent"
+                    android:text="@string/funcionario_submeter"
+                    android:textStyle="bold"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>
