@@ -42,12 +42,16 @@
     <string name="label_breakdown_type">Tipo de avaria</string>
     <string name="label_breakdown_date">Data da avaria</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="label_my_statistics">Minhas estatísticas</string>
     <string name="last_month">Último mês</string>
     <string name="label_amount">Quantidade</string>
     <string name="label_value">Valor</string>
     <string name="label_this_year">Ano Actual</string>
     <string name="label_spent_month">Mês com mais gastos</string>
+    <string name="label_buy_recharger">Comprar recarga</string>
+    <string name="label_amount_recharger">Insira o valor da recarga</string>
+    <string name="label_payment_method">Método de pagamento</string>
+    <string name="label_mpesa" translatable="false">M-Pesa</string>
+    <string name="label_buy">Comprar</string>
 
 </resources>

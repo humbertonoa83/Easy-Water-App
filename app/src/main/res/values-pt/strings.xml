@@ -40,4 +40,8 @@
     <string name="label_value">Valor</string>
     <string name="label_this_year">Ano actual</string>
     <string name="label_spent_month">Mês com mais gastos</string>
+    <string name="label_buy_recharger">Comprar recarga</string>
+    <string name="label_amount_recharger">Insira o valor da recarga</string>
+    <string name="label_payment_method">Método de pagamento</string>
+    <string name="label_buy">Comprar</string>
 </resources>

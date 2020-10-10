@@ -40,4 +40,8 @@
     <string name="label_value">Value</string>
     <string name="label_this_year">This year</string>
     <string name="label_spent_month">Most Spent Month</string>
+    <string name="label_buy_recharger">Buy refill</string>
+    <string name="label_amount_recharger">Enter the recharge amount</string>
+    <string name="label_payment_method">Payment method</string>
+    <string name="label_buy">Buy</string>
 </resources>
