@@ -24,7 +24,11 @@ import java.util.Map;
  */
 public class ApiRequest {
 
-    public static void makeRequest (final Context context, final String url, JSONObject jsonObject,
+   /**
+    * This method make a post request to the server
+    *
+    * */
+    public static void makePOSTRequest (final Context context, final String url, JSONObject jsonObject,
                                  final CallBack callback){
 
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
@@ -38,6 +42,49 @@ public class ApiRequest {
                         }
                     }
                 }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                if(callback!=null) {
+                    callback.responce(error.toString());
+                }
+            }
+        }) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+
+            @Override
+            public Map <String, String> getHeaders() throws AuthFailureError {
+                HashMap <String, String> headers = new HashMap<String, String>();
+
+                return headers;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        jsonObjReq.setRetryPolicy(new DefaultRetryPolicy(60000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        requestQueue.getCache().clear();
+        requestQueue.add(jsonObjReq);
+    }
+
+    public static void makeGETRequest (final Context context, final String url, JSONObject jsonObject,
+                                        final CallBack callback){
+
+        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
+                url, jsonObject, new Response.Listener<JSONObject>() {
+
+            @Override
+            public void onResponse(JSONObject response) {
+
+                if(callback!=null) {
+                    callback.responce(response.toString());
+                }
+            }
+        }, new Response.ErrorListener() {
 
             @Override
             public void onErrorResponse(VolleyError error) {

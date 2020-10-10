@@ -10,21 +10,21 @@ enum ApiRoutes implements ApiRoutesInterface{
         @Override
         public String path () {
 
-            return "api/clients/";
+            return "clients/";
         }
     },
     BREAKDOWN {
         @Override
         public String path () {
 
-            return "api/breakdowns/";
+            return "breakdowns/";
         }
     },
     CLIENTTYPE {
         @Override
         public String path () {
 
-            return "api/client-types/";
+            return "client-types/";
         }
     }
 }
