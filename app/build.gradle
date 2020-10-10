@@ -33,4 +33,7 @@ dependencies {
 
     //CircleImageView
     implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    //Volley
+    implementation 'dev.dworks.libs:volleyplus:+'
 }
