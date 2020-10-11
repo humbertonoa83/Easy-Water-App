@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login">Iniciar sessão</string>
+    <string name="hint_email">Introduza o seu email</string>
+    <string name="hint_password">Introduza a palavra-passe</string>
+    <string name="label_breakdown">Avaria</string>
+    <string name="label_recharger">Recarga</string>
+    <string name="label_second_copy">Segunda via</string>
+    <string name="label_create_recharger">Comprar Recarga</string>
+    <string name="label_mydatas">Meus dados</string>
+    <string name="label_painel">Painel</string>
+    <string name="label_profile">Perfil</string>
+    <string name="label_name">Nome</string>
+    <string name="label_client_name">Nome do cliente</string>
+    <string name="label_email">Email</string>
+    <string name="label_tel">Contactos</string>
+    <string name="label_personal_information">Informações pessoais</string>
+    <string name="label_document">Documento</string>
+    <string name="label_issue_date">Data de emissão</string>
+    <string name="label_valid_date">Válido até</string>
+    <string name="label_issue_place">Local de emissão</string>
+    <string name="label_province">Província</string>
+    <string name="label_city">Cidade</string>
+    <string name="label_district">Distrito</string>
+    <string name="label_neighborhood">Bairro</string>
+    <string name="label_street">Rua</string>
+    <string name="label_avenue">Avenida</string>
+    <string name="label_house">Casa</string>
+    <string name="label_block">Quarteirão</string>
+    <string name="label_address">Endereço</string>
+
+    <string name="label_add">Registro</string>
+    <string name="report_breakdown">Relatar avaria</string>
+    <string name="label_breakdown_cause">Causa da avaria</string>
+    <string name="label_breakdown_description">Descrição detalhada da avaria</string>
+    <string name="label_send">Enviar</string>
+    <string name="label_breakdown_type">Tipo de avaria</string>
+    <string name="label_breakdown_date">Data da avaria</string>
+    <string name="label_my_statistics">Minhas estatísticas</string>
+    <string name="last_month">Último mês</string>
+    <string name="label_amount">Quantidade</string>
+    <string name="label_value">Valor</string>
+    <string name="label_this_year">Ano actual</string>
+    <string name="label_spent_month">Mês com mais gastos</string>
+    <string name="label_buy_recharger">Comprar recarga</string>
+    <string name="label_amount_recharger">Insira o valor da recarga</string>
+    <string name="label_payment_method">Método de pagamento</string>
+    <string name="label_buy">Comprar</string>
+</resources>

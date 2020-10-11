@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login">Login</string>
+    <string name="hint_email">Entrer votre email</string>
+    <string name="hint_password">Entrer le mot de passe</string>
+    <string name="label_breakdown">Panne</string>
+    <string name="label_recharger">Recharger</string>
+    <string name="label_second_copy">Deuxième exemplaire</string>
+    <string name="label_create_recharger">Acheter une recharge</string>
+    <string name="label_mydatas">" Mes données"</string>
+    <string name="label_painel">" Panneau"</string>
+    <string name="label_profile">" Profil"</string>
+    <string name="label_name">Nom</string>
+    <string name="label_client_name">Nom du client</string>
+    <string name="label_email">Email</string>
+    <string name="label_tel">" Contacts"</string>
+    <string name="label_personal_information">" Informations personnelles"</string>
+    <string name="label_document">Document</string>
+    <string name="label_issue_date">Date d\'Emission</string>
+    <string name="label_valid_date">Valable jusque</string>
+    <string name="label_issue_place">" Lieu de délivrance"</string>
+    <string name="label_province">Province</string>
+    <string name="label_city">Ville</string>
+    <string name="label_district">District</string>
+    <string name="label_neighborhood">Quartier</string>
+    <string name="label_street">Rue</string>
+    <string name="label_avenue">Rue</string>
+    <string name="label_house">Maison</string>
+    <string name="label_block">Bloquer</string>
+    <string name="label_address">Address</string>
+    <string name="label_add">record</string>
+    <string name="report_breakdown">Signaler un dysfonctionnement</string>
+    <string name="label_breakdown_cause">Cause du dysfonctionnement</string>
+    <string name="label_breakdown_description">" Description détaillée du défaut"</string>
+    <string name="label_send">" Soumettre"</string>
+    <string name="label_breakdown_type">Type de dysfonctionnement</string>
+    <string name="label_breakdown_date">Date d\'échec</string>
+    <string name="label_my_statistics">Mes stats</string>
+    <string name="last_month">Le mois dernier</string>
+    <string name="label_amount">Montant</string>
+    <string name="label_value">Valeur</string>
+    <string name="label_this_year">Année actuelle</string>
+    <string name="label_spent_month">Mois le plus passé</string>
+    <string name="label_buy_recharger">" Acheter une recharge"</string>
+    <string name="label_amount_recharger">" Entrez le montant de la recharge"</string>
+    <string name="label_payment_method">" Mode de paiement"</string>
+    <string name="label_buy">Achat</string>
+
+</resources>

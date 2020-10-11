@@ -1,0 +1,140 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Don't alteer these Strings -->
+    <string name="app_name" translatable="false">Easy Water</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <!---  -->
+
+    <string name="login">Iniciar sessão</string>
+    <string name="hint_email">Introduza o seu email</string>
+    <string name="hint_password">Introduza a palavra-passe</string>
+    <string name="label_breakdown">Avaria</string>
+    <string name="label_recharger">Recarga</string>
+    <string name="label_second_copy">Segunda via</string>
+    <string name="label_create_recharger">Comprar Recarga</string>
+    <string name="label_mydatas">Meus dados</string>
+    <string name="label_painel">Painel</string>
+    <string name="label_profile">Perfil</string>
+    <string name="label_add" tools:ignore="MissingTranslation">Registro</string>
+    <string name="label_cliente" tools:ignore="MissingTranslation">Cliente</string>
+    <string name="label_employee" tools:ignore="MissingTranslation">Funcionario</string>
+    <string name="label_billing" tools:ignore="MissingTranslation">Factura</string>
+    <string name="label_payments" tools:ignore="MissingTranslation">Pagamento</string>
+    <string name="label_suspension" tools:ignore="MissingTranslation">Suspensao</string>
+
+    <string name="label_view" tools:ignore="MissingTranslation">Visualizar</string>
+    <string name="label_view_client" tools:ignore="MissingTranslation">Cliente</string>
+    <string name="label_view_employee" tools:ignore="MissingTranslation">Funcionario</string>
+    <string name="label_view_billing" tools:ignore="MissingTranslation">Factura</string>
+    <string name="label_view_payments" tools:ignore="MissingTranslation">Pagamento</string>
+    <string name="label_view_suspension" tools:ignore="MissingTranslation">Suspensao</string>
+
+    <string name="label_info" tools:ignore="MissingTranslation">Informacao</string>
+    <string name="label_info_about" tools:ignore="MissingTranslation">Acerca de</string>
+    <string name="label_info_exit" tools:ignore="MissingTranslation">Sair</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="label_name">Nome</string>
+    <string name="label_client_name">Nome do cliente</string>
+    <string name="label_email">Email</string>
+    <string name="label_tel">Contactos</string>
+    <string name="label_personal_information">Informações pessoais</string>
+    <string name="label_document">Documento</string>
+    <string name="label_issue_date">Data de emissão</string>
+    <string name="label_valid_date">Válido até</string>
+    <string name="label_issue_place">Local de emissão</string>
+    <string name="label_province">Província</string>
+    <string name="label_city">Cidade</string>
+    <string name="label_district">Distrito</string>
+    <string name="label_neighborhood">Bairro</string>
+    <string name="label_street">Rua</string>
+    <string name="label_avenue">Avenida</string>
+    <string name="label_house">Casa</string>
+    <string name="label_block">Quarteirão</string>
+    <string name="label_address">Endereço</string>
+    <string name="label_client_add" translatable="false">Registro</string>
+    <string name="label_cliente_surname" translatable="false">Apelido do cliente</string>
+    <string name="label_buy_recharger">Comprar recarga</string>
+    <string name="label_amount_recharger">Insira o valor da recarga</string>
+    <string name="label_payment_method">Método de pagamento</string>
+    <string name="label_mpesa" translatable="false">M-Pesa</string>
+    <string name="label_buy">Comprar</string>
+
+    <string name="cliente_nome" translatable="false">Nome </string>
+    <string name="cliente_apelido" translatable="false">Apelido </string>
+    <string name="cliente_bi" translatable="false">Bilhete identidade </string>
+    <string name="cliente_numero_contador" translatable="false">Numero contador </string>
+    <string name="cliente_tipo_contador" translatable="false">Tipo contador </string>
+    <string name="cliente_bairro" translatable="false">Bairro </string>
+    <string name="cliente_quateirao" translatable="false">Quarteirao </string>
+    <string name="cliente_cidade" translatable="false">Cidade/Provincia </string>
+    <string name="cliente_distrito" translatable="false">Distrito </string>
+    <string name="cliente_numero_casa" translatable="false">Numero Casa </string>
+    <string name="cliente_telefone_principal" translatable="false">Telefone Principal </string>
+    <string name="cliente_telefone_alternativo" translatable="false">Telefone Alternativo </string>
+
+    <string name="cliente_submeter" translatable="false">Submeter</string>
+    <string name="contador_prepago" translatable="false">Pre Pago</string>
+    <string name="contador_pospago" translatable="false">Pos Pago</string>
+
+    <string name="funcionario_nome" translatable="false">Nome</string>
+    <string name="funcionario_apelido" translatable="false">Apelido</string>
+    <string name="funcionario_bi" translatable="false">Bilhete identidade</string>
+    <string name="funcionario_cidade" translatable="false">Cidade/Provincia</string>
+    <string name="funcionario_bairro" translatable="false">Bairro</string>
+    <string name="funcionario_distrito" translatable="false">Distrito</string>
+    <string name="funcionario_telefone" translatable="false">Telefone</string>
+    <string name="funcionario_cargo" translatable="false">Cargo</string>
+    <string name="funcionario_posto" translatable="false">Posto</string>
+    <string name="funcionario_senha" translatable="false">Senha</string>
+    <string name="funcionario_confirmar_senha" translatable="false">Confirmar Senha</string>
+    <string name="funcionario_submeter" translatable="false">Submeter</string>
+
+    <string name="factura_codigo" translatable="false">Codigo factura</string>
+    <string name="factura_nome" translatable="false">Nome cliente</string>
+    <string name="factura_apelido" translatable="false">Apelido cliente</string>
+    <string name="factura_bairro" translatable="false">Bairro Cliente</string>
+    <string name="factura_metros" translatable="false">Metros Cubicos</string>
+    <string name="factura_data_actual" translatable="false">Data Actual</string>
+    <string name="factura_data_multa" translatable="false">Data Multa</string>
+    <string name="factura_contador" translatable="false">Tipo contrato</string>
+    <string name="factura_leitura" translatable="false">Leitura</string>
+    <string name="factura_valor_pagar" translatable="false">Valor a pagar</string>
+    <string name="factura_submeter" translatable="false">Submeter</string>
+    <string name="factura_exibir" translatable="false">+</string>
+
+    <string name="pagamento_codigo" translatable="false">Codigo cliente</string>
+    <string name="pagamento_nome" translatable="false">Nome cliente</string>
+    <string name="pagamento_exibir" translatable="false">Exibir</string>
+    <string name="pagamento_submeter" translatable="false">Submeter</string>
+
+
+    <string name="report_breakdown">Relatar avaria</string>
+    <string name="label_breakdown_cause">Causa da avaria</string>
+    <string name="label_breakdown_description">Descrição detalhada da avaria</string>
+    <string name="label_send">Enviar</string>
+    <string name="label_breakdown_type">Tipo de avaria</string>
+    <string name="label_breakdown_date">Data da avaria</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="label_my_statistics">Minhas estatísticas</string>
+    <string name="last_month">Último mês</string>
+    <string name="label_amount">Quantidade</string>
+    <string name="label_value">Valor</string>
+    <string name="label_this_year">Ano Actual</string>
+    <string name="label_spent_month">Mês com mais gastos</string>
+
+    <string name="corte_codigo" translatable="false">Codigo cliente</string>
+    <string name="corte_nome" translatable="false">Nome cliente</string>
+    <string name="corte_apelido" translatable="false">Apelido cliente</string>
+    <string name="corte_bairro" translatable="false">Bairro cliente</string>
+    <string name="corte_quarteirao" translatable="false">Quarteirao cliente</string>
+    <string name="corte_contrato" translatable="false">Contrato cliente</string>
+    <string name="corte_meses" translatable="false">Meses atrasados</string>
+    <string name="corte_listar_meses" translatable="false">Listar Meses atrasados</string>
+    <string name="corte_valor" translatable="false">Valor Total</string>
+    <string name="corte_situacao" translatable="false">Situacao</string>
+    <string name="corte_data" translatable="false">Data corte</string>
+    <string name="corte_submeter" translatable="false">Submeter</string>
+
+</resources>
