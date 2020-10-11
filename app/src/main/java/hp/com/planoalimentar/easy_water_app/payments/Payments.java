@@ -12,11 +12,11 @@ import android.view.ViewGroup;
 
 import hp.com.planoalimentar.easy_water_app.R;
 
-public class payments extends Fragment {
+public class Payments extends Fragment {
 private RecyclerView.Adapter dados;
 
 
-    public  payments(){
+    public Payments(){
 
     }
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

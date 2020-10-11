@@ -30,5 +30,17 @@
     <string name="label_address">Endereço</string>
 
     <string name="label_add">Registro</string>
-    <string name="label_client">cliente</string>
+    <string name="report_breakdown">Relatar avaria</string>
+    <string name="label_breakdown_cause">Causa da avaria</string>
+    <string name="label_breakdown_description">Descrição detalhada da avaria</string>
+    <string name="label_send">Enviar</string>
+    <string name="label_breakdown_type">Tipo de avaria</string>
+    <string name="label_breakdown_date">Data da avaria</string>
+    <string name="label_my_statistics">Minhas estatísticas</string>
+    <string name="last_month">Último mês</string>
+    <string name="label_amount">Quantidade</string>
+    <string name="label_value">Valor</string>
+    <string name="label_this_year">Ano actual</string>
+    <string name="label_spent_month">Mês com mais gastos</string>
+>>>>>>> origin/master
 </resources>

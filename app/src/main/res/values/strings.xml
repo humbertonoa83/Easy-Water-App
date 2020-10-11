@@ -20,19 +20,20 @@
     <string name="label_employee" tools:ignore="MissingTranslation">Funcionario</string>
     <string name="label_billing" tools:ignore="MissingTranslation">Factura</string>
     <string name="label_payments" tools:ignore="MissingTranslation">Pagamento</string>
+    <string name="label_suspension" tools:ignore="MissingTranslation">Suspensao</string>
 
     <string name="label_view" tools:ignore="MissingTranslation">Visualizar</string>
     <string name="label_view_client" tools:ignore="MissingTranslation">Cliente</string>
     <string name="label_view_employee" tools:ignore="MissingTranslation">Funcionario</string>
     <string name="label_view_billing" tools:ignore="MissingTranslation">Factura</string>
     <string name="label_view_payments" tools:ignore="MissingTranslation">Pagamento</string>
+    <string name="label_view_suspension" tools:ignore="MissingTranslation">Suspensao</string>
 
     <string name="label_info" tools:ignore="MissingTranslation">Informacao</string>
     <string name="label_info_about" tools:ignore="MissingTranslation">Acerca de</string>
     <string name="label_info_exit" tools:ignore="MissingTranslation">Sair</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="label_name">Nome</string>
     <string name="label_client_name">Nome do cliente</string>
     <string name="label_email">Email</string>
@@ -102,5 +103,33 @@
     <string name="pagamento_exibir" translatable="false">Exibir</string>
     <string name="pagamento_submeter" translatable="false">Submeter</string>
 
+
+    <string name="report_breakdown">Relatar avaria</string>
+    <string name="label_breakdown_cause">Causa da avaria</string>
+    <string name="label_breakdown_description">Descrição detalhada da avaria</string>
+    <string name="label_send">Enviar</string>
+    <string name="label_breakdown_type">Tipo de avaria</string>
+    <string name="label_breakdown_date">Data da avaria</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="label_my_statistics">Minhas estatísticas</string>
+    <string name="last_month">Último mês</string>
+    <string name="label_amount">Quantidade</string>
+    <string name="label_value">Valor</string>
+    <string name="label_this_year">Ano Actual</string>
+    <string name="label_spent_month">Mês com mais gastos</string>
+
+    <string name="corte_codigo" translatable="false">Codigo cliente</string>
+    <string name="corte_nome" translatable="false">Nome cliente</string>
+    <string name="corte_apelido" translatable="false">Apelido cliente</string>
+    <string name="corte_bairro" translatable="false">Bairro cliente</string>
+    <string name="corte_quarteirao" translatable="false">Quarteirao cliente</string>
+    <string name="corte_contrato" translatable="false">Contrato cliente</string>
+    <string name="corte_meses" translatable="false">Meses atrasados</string>
+    <string name="corte_listar_meses" translatable="false">Listar Meses atrasados</string>
+    <string name="corte_valor" translatable="false">Valor Total</string>
+    <string name="corte_situacao" translatable="false">Situacao</string>
+    <string name="corte_data" translatable="false">Data corte</string>
+    <string name="corte_submeter" translatable="false">Submeter</string>
 
 </resources>

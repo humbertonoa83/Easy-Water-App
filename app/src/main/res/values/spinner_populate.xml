@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="contrato">
+        <item>Pre Pago</item>
+        <item>Pos Pago</item>
+    </string-array>
+
+    <string-array name="situacao">
+        <item>Corte fornecimento</item>
+        <item>Suspensao fornecimento</item>
+    </string-array>
+
+</resources>

@@ -29,5 +29,17 @@
     <string name="label_block">Bloquer</string>
     <string name="label_address">Address</string>
     <string name="label_add">record</string>
-    <string name="label_client">client</string>
+    <string name="report_breakdown">Signaler un dysfonctionnement</string>
+    <string name="label_breakdown_cause">Cause du dysfonctionnement</string>
+    <string name="label_breakdown_description">" Description détaillée du défaut"</string>
+    <string name="label_send">" Soumettre"</string>
+    <string name="label_breakdown_type">Type de dysfonctionnement</string>
+    <string name="label_breakdown_date">Date d\'échec</string>
+    <string name="label_my_statistics">Mes stats</string>
+    <string name="last_month">Le mois dernier</string>
+    <string name="label_amount">Montant</string>
+    <string name="label_value">Valeur</string>
+    <string name="label_this_year">Année actuelle</string>
+    <string name="label_spent_month">Mois le plus passé</string>
+>>>>>>> origin/master
 </resources>

@@ -1,0 +1,721 @@
+Index: app/src/main/res/layout/fragment_buy_recharger.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_buy_recharger.xml	(revision 6f75abb40042d25fb822c608001dd17dc6609673)
++++ app/src/main/res/layout/fragment_buy_recharger.xml	(date 1601928519000)
+@@ -9,6 +9,6 @@
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+-        android:text="@string/hello_blank_fragment" />
++        android:text="@string/" />
+ 
+ </FrameLayout>
+\ No newline at end of file
+Index: app/src/main/java/hp/com/planoalimentar/easy_water_app/breakdown/BreakdownFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/hp/com/planoalimentar/easy_water_app/breakdown/BreakdownFragment.java	(date 1601928519000)
++++ app/src/main/java/hp/com/planoalimentar/easy_water_app/breakdown/BreakdownFragment.java	(date 1601928519000)
+@@ -0,0 +1,32 @@
++package hp.com.planoalimentar.easy_water_app.breakdown;
++
++import android.os.Bundle;
++
++import androidx.fragment.app.Fragment;
++
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++import hp.com.planoalimentar.easy_water_app.R;
++
++/**
++ * This is a product created by AEISUTC Team on
++ * Matyanga Project concurs
++ * Created by humbertonoa83@gmail.com on 02/10/2020.
++ */
++public class BreakdownFragment extends Fragment {
++
++    public BreakdownFragment () {
++        // Required empty public constructor
++    }
++
++
++    @Override
++    public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
++        // Inflate the layout for this fragment
++        View view = inflater.inflate(R.layout.fragment_breakdown, container, false);
++
++        return view;
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/hp/com/planoalimentar/easy_water_app/client/datas/ClientDataFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/hp/com/planoalimentar/easy_water_app/client/datas/ClientDataFragment.java	(date 1601928519000)
++++ app/src/main/java/hp/com/planoalimentar/easy_water_app/client/datas/ClientDataFragment.java	(date 1601928519000)
+@@ -0,0 +1,31 @@
++package hp.com.planoalimentar.easy_water_app.client.datas;
++
++import android.os.Bundle;
++
++import androidx.fragment.app.Fragment;
++
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++import hp.com.planoalimentar.easy_water_app.R;
++
++/**
++ * This is a product created by AEISUTC Team on
++ * Matyanga Project concurs
++ * Created by humbertonoa83@gmail.com on 02/10/2020.
++ */
++public class ClientDataFragment extends Fragment {
++
++    public ClientDataFragment () {
++        // Required empty public constructor
++    }
++
++    @Override
++    public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
++        // Inflate the layout for this fragment
++        View view = inflater.inflate(R.layout.fragment_client_data, container, false);
++
++        return view;
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/values-pt/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values-pt/strings.xml	(revision 6f75abb40042d25fb822c608001dd17dc6609673)
++++ app/src/main/res/values-pt/strings.xml	(date 1601928519000)
+@@ -28,7 +28,22 @@
+     <string name="label_house">Casa</string>
+     <string name="label_block">Quarteirão</string>
+     <string name="label_address">Endereço</string>
++<<<<<<< HEAD
+ 
+     <string name="label_add">Registro</string>
+     <string name="label_client">cliente</string>
++=======
++    <string name="report_breakdown">Relatar avaria</string>
++    <string name="label_breakdown_cause">Causa da avaria</string>
++    <string name="label_breakdown_description">Descrição detalhada da avaria</string>
++    <string name="label_send">Enviar</string>
++    <string name="label_breakdown_type">Tipo de avaria</string>
++    <string name="label_breakdown_date">Data da avaria</string>
++    <string name="label_my_statistics">Minhas estatísticas</string>
++    <string name="last_month">Último mês</string>
++    <string name="label_amount">Quantidade</string>
++    <string name="label_value">Valor</string>
++    <string name="label_this_year">Ano actual</string>
++    <string name="label_spent_month">Mês com mais gastos</string>
++>>>>>>> origin/master
+ </resources>
+\ No newline at end of file
+Index: app/src/main/java/hp/com/planoalimentar/easy_water_app/init/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/hp/com/planoalimentar/easy_water_app/init/MainActivity.java	(revision 6f75abb40042d25fb822c608001dd17dc6609673)
++++ app/src/main/java/hp/com/planoalimentar/easy_water_app/init/MainActivity.java	(date 1601928519000)
+@@ -9,9 +9,12 @@
+ import androidx.drawerlayout.widget.DrawerLayout;
+ import androidx.fragment.app.Fragment;
+ import androidx.fragment.app.FragmentManager;
++<<<<<<< HEAD
+ 
+ import android.content.DialogInterface;
+ import android.content.Intent;
++=======
++>>>>>>> origin/master
+ import android.graphics.Color;
+ import android.os.Bundle;
+ import android.view.MenuItem;
+@@ -19,6 +22,7 @@
+ import com.google.android.material.navigation.NavigationView;
+ 
+ import hp.com.planoalimentar.easy_water_app.R;
++<<<<<<< HEAD
+ import hp.com.planoalimentar.easy_water_app.auth.LoginActivity;
+ import hp.com.planoalimentar.easy_water_app.billing.billing;
+ import hp.com.planoalimentar.easy_water_app.billing.view_billing;
+@@ -30,6 +34,10 @@
+ import hp.com.planoalimentar.easy_water_app.info.exit;
+ import hp.com.planoalimentar.easy_water_app.payments.payments;
+ import hp.com.planoalimentar.easy_water_app.payments.view_payments;
++=======
++import hp.com.planoalimentar.easy_water_app.breakdown.BreakdownFragment;
++import hp.com.planoalimentar.easy_water_app.client.datas.ClientDataFragment;
++>>>>>>> origin/master
+ import hp.com.planoalimentar.easy_water_app.profile.ProfileFragment;
+ import hp.com.planoalimentar.easy_water_app.recharger.BuyRecharger;
+ 
+@@ -96,6 +104,7 @@
+                 fragmentClass = ProfileFragment.class;
+                 break;
+ 
++<<<<<<< HEAD
+             case R.id.add_client:
+                 fragmentClass = client.class;
+                 break;
+@@ -149,6 +158,16 @@
+                 AlertDialog alert = builder.create();
+                 alert.show();
+                 break;
++=======
++            case R.id.breakdown:
++                fragmentClass = BreakdownFragment.class;
++                break;
++
++            case R.id.mydatas:
++                fragmentClass = ClientDataFragment.class;
++                break;
++
++>>>>>>> origin/master
+             default:;
+         }
+ 
+Index: app/src/main/res/values-fr/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values-fr/strings.xml	(revision 6f75abb40042d25fb822c608001dd17dc6609673)
++++ app/src/main/res/values-fr/strings.xml	(date 1601928519000)
+@@ -28,6 +28,21 @@
+     <string name="label_house">Maison</string>
+     <string name="label_block">Bloquer</string>
+     <string name="label_address">Address</string>
++<<<<<<< HEAD
+     <string name="label_add">record</string>
+     <string name="label_client">client</string>
++=======
++    <string name="report_breakdown">Signaler un dysfonctionnement</string>
++    <string name="label_breakdown_cause">Cause du dysfonctionnement</string>
++    <string name="label_breakdown_description">" Description détaillée du défaut"</string>
++    <string name="label_send">" Soumettre"</string>
++    <string name="label_breakdown_type">Type de dysfonctionnement</string>
++    <string name="label_breakdown_date">Date d\'échec</string>
++    <string name="label_my_statistics">Mes stats</string>
++    <string name="last_month">Le mois dernier</string>
++    <string name="label_amount">Montant</string>
++    <string name="label_value">Valeur</string>
++    <string name="label_this_year">Année actuelle</string>
++    <string name="label_spent_month">Mois le plus passé</string>
++>>>>>>> origin/master
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_breakdown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_breakdown.xml	(date 1601928519000)
++++ app/src/main/res/layout/fragment_breakdown.xml	(date 1601928519000)
+@@ -0,0 +1,102 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    tools:context=".breakdown.BreakdownFragment">
++
++    <ScrollView
++        android:layout_width="match_parent"
++        android:layout_height="match_parent">
++
++        <RelativeLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent">
++
++            <TextView
++                android:layout_marginTop="10dp"
++                android:layout_width="match_parent"
++                android:gravity="center"
++                android:layout_height="wrap_content"
++                android:textSize="18sp"
++                android:text="@string/report_breakdown"
++                android:textStyle="bold"
++                android:id="@+id/title"
++                android:layout_marginBottom="5dp"/>
++
++            <com.google.android.material.textfield.TextInputLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:id="@+id/breakdown_cause"
++                android:layout_below="@+id/title"
++                android:hint="@string/label_breakdown_type"
++                android:layout_margin="15dp"
++                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
++                >
++
++                <com.google.android.material.textfield.TextInputEditText
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:inputType="textMultiLine"
++                    android:lines="2"
++                    android:maxLines="3"
++                    />
++
++            </com.google.android.material.textfield.TextInputLayout>
++
++            <com.google.android.material.textfield.TextInputLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:id="@+id/breakdown_date"
++                android:layout_below="@+id/breakdown_cause"
++                android:hint="@string/label_breakdown_date"
++                app:hintAnimationEnabled="true"
++                android:layout_margin="15dp"
++                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
++                >
++
++                <com.google.android.material.textfield.TextInputEditText
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:inputType="date"
++                    />
++
++            </com.google.android.material.textfield.TextInputLayout>
++
++            <com.google.android.material.textfield.TextInputLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_below="@+id/breakdown_date"
++                android:hint="@string/label_breakdown_description"
++                android:id="@+id/breakdown_description"
++                android:layout_margin="15dp"
++                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
++                >
++
++                <com.google.android.material.textfield.TextInputEditText
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:inputType="textMultiLine"
++                    android:lines="5"
++                    android:maxLines="6"
++                    />
++
++            </com.google.android.material.textfield.TextInputLayout>
++
++            <Button
++                android:id="@+id/btn_Login"
++                android:layout_width="match_parent"
++                android:layout_margin="10dp"
++                android:text="@string/label_send"
++                android:textStyle="bold"
++                android:layout_below="@+id/breakdown_description"
++                android:background="@color/colorPrimary"
++                android:textColor="@android:color/white"
++                android:layout_height="wrap_content" />
++
++        </RelativeLayout>
++
++    </ScrollView>
++
++</RelativeLayout>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision 6f75abb40042d25fb822c608001dd17dc6609673)
++++ app/src/main/res/values/strings.xml	(date 1601928519000)
+@@ -32,7 +32,10 @@
+     <string name="label_info_exit" tools:ignore="MissingTranslation">Sair</string>
+ 
+     <!-- TODO: Remove or change this placeholder text -->
++<<<<<<< HEAD
+     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
++=======
++>>>>>>> origin/master
+     <string name="label_name">Nome</string>
+     <string name="label_client_name">Nome do cliente</string>
+     <string name="label_email">Email</string>
+@@ -51,6 +54,7 @@
+     <string name="label_house">Casa</string>
+     <string name="label_block">Quarteirão</string>
+     <string name="label_address">Endereço</string>
++<<<<<<< HEAD
+     <string name="label_client_add" translatable="false">Registro</string>
+     <string name="label_cliente_surname" translatable="false">Apelido do cliente</string>
+ 
+@@ -102,5 +106,21 @@
+     <string name="pagamento_exibir" translatable="false">Exibir</string>
+     <string name="pagamento_submeter" translatable="false">Submeter</string>
+ 
++=======
++    <string name="report_breakdown">Relatar avaria</string>
++    <string name="label_breakdown_cause">Causa da avaria</string>
++    <string name="label_breakdown_description">Descrição detalhada da avaria</string>
++    <string name="label_send">Enviar</string>
++    <string name="label_breakdown_type">Tipo de avaria</string>
++    <string name="label_breakdown_date">Data da avaria</string>
++    <!-- TODO: Remove or change this placeholder text -->
++    <string name="hello_blank_fragment">Hello blank fragment</string>
++    <string name="label_my_statistics">Minhas estatísticas</string>
++    <string name="last_month">Último mês</string>
++    <string name="label_amount">Quantidade</string>
++    <string name="label_value">Valor</string>
++    <string name="label_this_year">Ano Actual</string>
++    <string name="label_spent_month">Mês com mais gastos</string>
++>>>>>>> origin/master
+ 
+ </resources>
+Index: app/src/main/res/layout/fragment_client_data.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_client_data.xml	(date 1601928519000)
++++ app/src/main/res/layout/fragment_client_data.xml	(date 1601928519000)
+@@ -0,0 +1,271 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    tools:context=".client.datas.ClientDataFragment">
++
++    <ScrollView
++        android:layout_width="match_parent"
++        android:layout_height="match_parent">
++        <RelativeLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:padding="10dp">
++
++            <TextView
++                android:layout_marginTop="10dp"
++                android:layout_width="match_parent"
++                android:gravity="center"
++                android:layout_height="wrap_content"
++                android:textSize="18sp"
++                android:text="@string/label_my_statistics"
++                android:textStyle="bold"
++                android:id="@+id/title"
++                android:layout_marginBottom="5dp"/>
++            <View
++                android:layout_below="@id/title"
++                android:layout_width="match_parent"
++                android:background="@color/colorPrimary"
++                android:layout_height="1px"
++                android:id="@+id/view"/>
++
++            <androidx.constraintlayout.widget.ConstraintLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:id="@+id/constraint1"
++                android:layout_below="@+id/view">
++                <TextView
++                    android:id="@+id/txt_last_month"
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:text="@string/last_month"
++                    android:textStyle="bold"
++                    android:layout_marginTop="10dp"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toTopOf="parent"
++                    app:layout_constraintRight_toLeftOf="@id/last_month"
++                    android:textSize="22sp"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:id="@+id/last_month"
++                    app:layout_constraintTop_toTopOf="parent"
++                    android:layout_marginStart="15dp"
++                    app:layout_constraintLeft_toRightOf="@+id/txt_last_month"
++                    android:layout_marginTop="15dp"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:textStyle="bold"
++                    android:id="@+id/amount"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toBottomOf="@+id/txt_last_month"
++                    android:layout_marginTop="15dp"
++                    android:text="@string/label_amount"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:id="@+id/txt_amount"
++                    app:layout_constraintStart_toStartOf="@+id/last_month"
++                    app:layout_constraintTop_toBottomOf="@+id/last_month"
++                    android:layout_marginTop="15dp"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:textStyle="bold"
++                    android:id="@+id/value"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toBottomOf="@+id/amount"
++                    android:layout_marginTop="15dp"
++                    android:text="@string/label_value"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:id="@+id/txt_value"
++                    app:layout_constraintStart_toStartOf="@+id/last_month"
++                    app:layout_constraintTop_toBottomOf="@+id/txt_amount"
++                    android:layout_marginTop="15dp"/>
++
++            </androidx.constraintlayout.widget.ConstraintLayout>
++
++            <View
++                android:layout_below="@id/constraint1"
++                android:layout_width="match_parent"
++                android:background="@color/colorPrimary"
++                android:layout_height="1px"
++                android:layout_marginTop="8dp"
++                android:id="@+id/view1"/>
++
++            <androidx.constraintlayout.widget.ConstraintLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:id="@+id/constraint2"
++                android:layout_marginTop="8dp"
++                android:layout_below="@+id/view1">
++                <TextView
++                    android:id="@+id/_this_year"
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:text="@string/label_this_year"
++                    android:textStyle="bold"
++                    android:layout_marginTop="10dp"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toTopOf="parent"
++                    app:layout_constraintRight_toLeftOf="@id/txt_this_year"
++                    android:textSize="22sp"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:id="@+id/txt_this_year"
++                    app:layout_constraintTop_toTopOf="parent"
++                    android:layout_marginStart="15dp"
++                    app:layout_constraintLeft_toRightOf="@+id/_this_year"
++                    android:layout_marginTop="15dp"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:textStyle="bold"
++                    android:id="@+id/year_amount"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toBottomOf="@+id/_this_year"
++                    android:layout_marginTop="15dp"
++                    android:text="@string/label_amount"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:id="@+id/txt_year_amount"
++                    app:layout_constraintStart_toStartOf="@+id/txt_this_year"
++                    app:layout_constraintTop_toBottomOf="@+id/txt_this_year"
++                    android:layout_marginTop="15dp"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:textStyle="bold"
++                    android:id="@+id/year_value"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toBottomOf="@+id/year_amount"
++                    android:layout_marginTop="15dp"
++                    android:text="@string/label_value"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:id="@+id/txt_year_value"
++                    app:layout_constraintStart_toStartOf="@+id/txt_this_year"
++                    app:layout_constraintTop_toBottomOf="@+id/txt_year_amount"
++                    android:layout_marginTop="15dp"/>
++
++            </androidx.constraintlayout.widget.ConstraintLayout>
++
++            <View
++                android:layout_below="@id/constraint2"
++                android:layout_width="match_parent"
++                android:background="@color/colorPrimary"
++                android:layout_height="1px"
++                android:layout_marginTop="8dp"
++                android:id="@+id/view2"/>
++
++            <androidx.constraintlayout.widget.ConstraintLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:id="@+id/constraint3"
++                android:layout_marginTop="8dp"
++                android:layout_below="@+id/view2">
++                <TextView
++                    android:id="@+id/_spent_month"
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:text="@string/label_spent_month"
++                    android:textStyle="bold"
++                    android:layout_marginTop="10dp"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toTopOf="parent"
++                    app:layout_constraintRight_toLeftOf="@id/txt_spent_month"
++                    android:textSize="22sp"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:id="@+id/txt_spent_month"
++                    app:layout_constraintTop_toTopOf="parent"
++                    android:layout_marginStart="15dp"
++                    app:layout_constraintLeft_toRightOf="@+id/_spent_month"
++                    android:layout_marginTop="15dp"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:textStyle="bold"
++                    android:id="@+id/spent_month_amount"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toBottomOf="@+id/_spent_month"
++                    android:layout_marginTop="15dp"
++                    android:text="@string/label_amount"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:id="@+id/txt_spent_month_amount"
++                    app:layout_constraintStart_toStartOf="@+id/txt_spent_month"
++                    app:layout_constraintTop_toBottomOf="@+id/txt_spent_month"
++                    android:layout_marginTop="15dp"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:textStyle="bold"
++                    android:id="@+id/spent_month_value"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toBottomOf="@+id/spent_month_amount"
++                    android:layout_marginTop="15dp"
++                    android:text="@string/label_value"/>
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:textSize="16sp"
++                    android:id="@+id/txt_spent_month_value"
++                    app:layout_constraintStart_toStartOf="@+id/txt_spent_month"
++                    app:layout_constraintTop_toBottomOf="@+id/txt_spent_month_amount"
++                    android:layout_marginTop="15dp"/>
++
++            </androidx.constraintlayout.widget.ConstraintLayout>
++
++            <View
++                android:layout_below="@id/constraint2"
++                android:layout_width="match_parent"
++                android:background="@color/colorPrimary"
++                android:layout_height="1px"
++                android:layout_marginTop="8dp"
++                android:id="@+id/view3"/>
++
++            <!-- Dívidas -->
++
++        </RelativeLayout>
++    </ScrollView>
++</RelativeLayout>
+\ No newline at end of file
+Index: app/src/main/res/values-es/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values-es/strings.xml	(revision 6f75abb40042d25fb822c608001dd17dc6609673)
++++ app/src/main/res/values-es/strings.xml	(date 1601928519000)
+@@ -28,6 +28,21 @@
+     <string name="label_house">Casa</string>
+     <string name="label_block">Bloquear</string>
+     <string name="label_address">Morada</string>
++<<<<<<< HEAD
+     <string name="label_add">add</string>
+     <string name="label_client">cliente</string>
++=======
++    <string name="report_breakdown">" Informar mal funcionamiento"</string>
++    <string name="label_breakdown_cause">" Causa del mal funcionamiento"</string>
++    <string name="label_breakdown_description">" Descripción detallada de la avería"</string>
++    <string name="label_send">" Enviar"</string>
++    <string name="label_breakdown_type">Tipo de avería</string>
++    <string name="label_breakdown_date">Fecha de falla</string>
++    <string name="label_my_statistics">Mis estadísticas</string>
++    <string name="last_month">El mes pasado</string>
++    <string name="label_amount">Cantidad</string>
++    <string name="label_value">Valor</string>
++    <string name="label_this_year">Año corriente</string>
++    <string name="label_spent_month">Mes más gastado</string>
++>>>>>>> origin/master
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/values-en/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values-en/strings.xml	(revision 6f75abb40042d25fb822c608001dd17dc6609673)
++++ app/src/main/res/values-en/strings.xml	(date 1601928519000)
+@@ -28,6 +28,21 @@
+     <string name="label_house">House</string>
+     <string name="label_block">Block</string>
+     <string name="label_address">Address</string>
++<<<<<<< HEAD
+     <string name="label_add">Add</string>
+     <string name="label_client">client</string>
++=======
++    <string name="report_breakdown">" Report malfunction"</string>
++    <string name="label_breakdown_cause">" Cause of malfunction"</string>
++    <string name="label_breakdown_description">Detailed description of the fault</string>
++    <string name="label_send">Send</string>
++    <string name="label_breakdown_type">Type of malfunction</string>
++    <string name="label_breakdown_date">Failure date</string>
++    <string name="label_my_statistics">" My stats"</string>
++    <string name="last_month">Last month</string>
++    <string name="label_amount">Amount</string>
++    <string name="label_value">Value</string>
++    <string name="label_this_year">This year</string>
++    <string name="label_spent_month">Most Spent Month</string>
++>>>>>>> origin/master
+ </resources>
+\ No newline at end of file

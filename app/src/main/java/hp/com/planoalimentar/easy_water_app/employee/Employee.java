@@ -12,10 +12,10 @@ import hp.com.planoalimentar.easy_water_app.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link employee#newInstance} factory method to
+ * Use the {@link Employee#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class employee extends Fragment {
+public class Employee extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class employee extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public employee() {
+    public Employee() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class employee extends Fragment {
      * @return A new instance of fragment Fragment_employee.
      */
     // TODO: Rename and change types and number of parameters
-    public static employee newInstance(String param1, String param2) {
-        employee fragment = new employee();
+    public static Employee newInstance(String param1, String param2) {
+        Employee fragment = new Employee();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

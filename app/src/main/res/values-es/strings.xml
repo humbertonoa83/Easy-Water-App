@@ -29,5 +29,17 @@
     <string name="label_block">Bloquear</string>
     <string name="label_address">Morada</string>
     <string name="label_add">add</string>
-    <string name="label_client">cliente</string>
+    <string name="report_breakdown">" Informar mal funcionamiento"</string>
+    <string name="label_breakdown_cause">" Causa del mal funcionamiento"</string>
+    <string name="label_breakdown_description">" Descripción detallada de la avería"</string>
+    <string name="label_send">" Enviar"</string>
+    <string name="label_breakdown_type">Tipo de avería</string>
+    <string name="label_breakdown_date">Fecha de falla</string>
+    <string name="label_my_statistics">Mis estadísticas</string>
+    <string name="last_month">El mes pasado</string>
+    <string name="label_amount">Cantidad</string>
+    <string name="label_value">Valor</string>
+    <string name="label_this_year">Año corriente</string>
+    <string name="label_spent_month">Mes más gastado</string>
+>>>>>>> origin/master
 </resources>

@@ -12,10 +12,10 @@ import hp.com.planoalimentar.easy_water_app.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link view_billing#newInstance} factory method to
+ * Use the {@link View_Billing#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class view_billing extends Fragment {
+public class View_Billing extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class view_billing extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public view_billing() {
+    public View_Billing() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class view_billing extends Fragment {
      * @return A new instance of fragment view_billing.
      */
     // TODO: Rename and change types and number of parameters
-    public static view_billing newInstance(String param1, String param2) {
-        view_billing fragment = new view_billing();
+    public static View_Billing newInstance(String param1, String param2) {
+        View_Billing fragment = new View_Billing();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

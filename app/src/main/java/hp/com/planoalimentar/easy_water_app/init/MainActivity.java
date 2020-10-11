@@ -1,5 +1,10 @@
 package hp.com.planoalimentar.easy_water_app.init;
 
+import android.content.DialogInterface;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -10,28 +15,23 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.view.MenuItem;
-
 import com.google.android.material.navigation.NavigationView;
 
 import hp.com.planoalimentar.easy_water_app.R;
-import hp.com.planoalimentar.easy_water_app.auth.LoginActivity;
-import hp.com.planoalimentar.easy_water_app.billing.billing;
-import hp.com.planoalimentar.easy_water_app.billing.view_billing;
-import hp.com.planoalimentar.easy_water_app.client.client;
-import hp.com.planoalimentar.easy_water_app.client.view_client;
-import hp.com.planoalimentar.easy_water_app.employee.employee;
-import hp.com.planoalimentar.easy_water_app.employee.view_employee;
-import hp.com.planoalimentar.easy_water_app.info.about;
-import hp.com.planoalimentar.easy_water_app.info.exit;
-import hp.com.planoalimentar.easy_water_app.payments.payments;
-import hp.com.planoalimentar.easy_water_app.payments.view_payments;
+import hp.com.planoalimentar.easy_water_app.billing.Billing;
+import hp.com.planoalimentar.easy_water_app.billing.View_Billing;
+import hp.com.planoalimentar.easy_water_app.breakdown.BreakdownFragment;
+import hp.com.planoalimentar.easy_water_app.client.Client;
+import hp.com.planoalimentar.easy_water_app.client.View_Client;
+import hp.com.planoalimentar.easy_water_app.client.datas.ClientDataFragment;
+import hp.com.planoalimentar.easy_water_app.employee.Employee;
+import hp.com.planoalimentar.easy_water_app.employee.View_Employee;
+import hp.com.planoalimentar.easy_water_app.info.About;
+import hp.com.planoalimentar.easy_water_app.payments.Payments;
+import hp.com.planoalimentar.easy_water_app.payments.View_Payments;
 import hp.com.planoalimentar.easy_water_app.profile.ProfileFragment;
 import hp.com.planoalimentar.easy_water_app.recharger.BuyRecharger;
+import hp.com.planoalimentar.easy_water_app.suspension.Suspension;
 
 /**
  * This is a product created by AEISUTC Team on
@@ -97,35 +97,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.add_client:
-                fragmentClass = client.class;
+                fragmentClass = Client.class;
                 break;
             case R.id.add_employee:
-                fragmentClass = employee.class;
+                fragmentClass = Employee.class;
             break;
 
             case R.id.add_billing:
-                fragmentClass = billing.class;
+                fragmentClass = Billing.class;
                 break;
             case R.id.add_Payments:
-                fragmentClass = payments.class;
+                fragmentClass = Payments.class;
                 break;
-
+            case R.id.add_suspension:
+                fragmentClass = Suspension.class;
+                break;
             case R.id.view_client:
-                fragmentClass = view_client.class;
+                fragmentClass = View_Client.class;
                 break;
             case R.id.view_employee:
-                fragmentClass = view_employee.class;
+                fragmentClass = View_Employee.class;
                 break;
             case R.id.view_billing:
-                fragmentClass = view_billing.class;
+                fragmentClass = View_Billing.class;
                 break;
 
             case R.id.view_Payments:
-                fragmentClass = view_payments.class;
+                fragmentClass = View_Payments.class;
                 break;
 
             case R.id.info_about:
-                fragmentClass = about.class;
+                fragmentClass = About.class;
                 break;
             case R.id.info_exit:
                // android.os.Process.killProcess(android.os.Process.myPid());
@@ -148,6 +150,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         });
                 AlertDialog alert = builder.create();
                 alert.show();
+                break;
+
+            case R.id.breakdown:
+                fragmentClass = BreakdownFragment.class;
+                break;
+
+            case R.id.mydatas:
+                fragmentClass = ClientDataFragment.class;
                 break;
             default:;
         }

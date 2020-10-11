@@ -11,11 +11,11 @@ import android.view.ViewGroup;
 import hp.com.planoalimentar.easy_water_app.R;
 
 
-public class exit extends Fragment {
+public class Exit extends Fragment {
 
 
 
-    public exit() {
+    public Exit() {
         // Required empty public constructor
     }
 

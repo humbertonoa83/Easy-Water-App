@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".client.datas.ClientDataFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/label_my_statistics"
+                android:textStyle="bold"
+                android:id="@+id/title"
+                android:layout_marginBottom="5dp"/>
+            <View
+                android:layout_below="@id/title"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimary"
+                android:layout_height="1px"
+                android:id="@+id/view"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/constraint1"
+                android:layout_below="@+id/view">
+                <TextView
+                    android:id="@+id/txt_last_month"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_month"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/last_month"
+                    android:textSize="22sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/last_month"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintLeft_toRightOf="@+id/txt_last_month"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/amount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_last_month"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/label_amount"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/txt_amount"
+                    app:layout_constraintStart_toStartOf="@+id/last_month"
+                    app:layout_constraintTop_toBottomOf="@+id/last_month"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/value"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/amount"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/label_value"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/txt_value"
+                    app:layout_constraintStart_toStartOf="@+id/last_month"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_amount"
+                    android:layout_marginTop="15dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_below="@id/constraint1"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimary"
+                android:layout_height="1px"
+                android:layout_marginTop="8dp"
+                android:id="@+id/view1"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/constraint2"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/view1">
+                <TextView
+                    android:id="@+id/_this_year"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_this_year"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txt_this_year"
+                    android:textSize="22sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/txt_this_year"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintLeft_toRightOf="@+id/_this_year"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/year_amount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/_this_year"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/label_amount"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/txt_year_amount"
+                    app:layout_constraintStart_toStartOf="@+id/txt_this_year"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_this_year"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/year_value"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/year_amount"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/label_value"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/txt_year_value"
+                    app:layout_constraintStart_toStartOf="@+id/txt_this_year"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_year_amount"
+                    android:layout_marginTop="15dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_below="@id/constraint2"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimary"
+                android:layout_height="1px"
+                android:layout_marginTop="8dp"
+                android:id="@+id/view2"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/constraint3"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/view2">
+                <TextView
+                    android:id="@+id/_spent_month"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_spent_month"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txt_spent_month"
+                    android:textSize="22sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/txt_spent_month"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintLeft_toRightOf="@+id/_spent_month"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/spent_month_amount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/_spent_month"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/label_amount"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/txt_spent_month_amount"
+                    app:layout_constraintStart_toStartOf="@+id/txt_spent_month"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_spent_month"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/spent_month_value"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spent_month_amount"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/label_value"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/txt_spent_month_value"
+                    app:layout_constraintStart_toStartOf="@+id/txt_spent_month"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_spent_month_amount"
+                    android:layout_marginTop="15dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_below="@id/constraint2"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimary"
+                android:layout_height="1px"
+                android:layout_marginTop="8dp"
+                android:id="@+id/view3"/>
+
+            <!-- Dívidas -->
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

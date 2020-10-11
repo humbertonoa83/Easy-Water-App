@@ -1,4 +1,4 @@
-package hp.com.planoalimentar.easy_water_app.payments;
+package hp.com.planoalimentar.easy_water_app.client;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import hp.com.planoalimentar.easy_water_app.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link view_payments#newInstance} factory method to
+ * Use the {@link View_Client#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class view_payments extends Fragment {
+public class View_Client extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class view_payments extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public view_payments() {
+    public View_Client() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class view_payments extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment view_payments.
+     * @return A new instance of fragment view_client.
      */
     // TODO: Rename and change types and number of parameters
-    public static view_payments newInstance(String param1, String param2) {
-        view_payments fragment = new view_payments();
+    public static View_Client newInstance(String param1, String param2) {
+        View_Client fragment = new View_Client();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class view_payments extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_view_payments, container, false);
+        return inflater.inflate(R.layout.fragment_view_client, container, false);
     }
 }

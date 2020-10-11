@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-
-        <item android:id="@+id/painel"
+    <item android:id="@+id/painel"
             android:title="@string/label_painel">
         <!--  Vai mostrar os meus ultimos dados, malta ultimos pagamentos, ultimos gastos e tal-->
             <menu>
@@ -73,6 +70,12 @@
                     android:icon="@drawable/ic_monetization_on_24">
                 </item>
 
+                <item
+                    android:id="@+id/add_suspension"
+                    android:title="@string/label_suspension"
+                    android:icon="@drawable/ic_remove_24">
+                </item>
+
             </group>
         </menu>
     </item>
@@ -98,6 +101,12 @@
                 <item
                     android:id="@+id/view_Payments"
                     android:title="@string/label_view_payments"
+                    android:icon="@drawable/ic_view_list_24">
+                </item>
+
+                <item
+                    android:id="@+id/view_suspension"
+                    android:title="@string/label_view_suspension"
                     android:icon="@drawable/ic_view_list_24">
                 </item>
 

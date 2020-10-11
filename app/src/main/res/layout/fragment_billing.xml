@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".billing.billing">
+    tools:context=".billing.Billing">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -451,27 +451,24 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linear_factura_leitura"
+                android:id="@+id/linear_factura_exibir_leitura"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear_factura_data_pagar"
                 android:padding="10dp">
 
+                <include
+                    android:id="@+id/header" layout="@layout/fragment_camera">
 
-                <Button
-                    android:id="@+id/btn_camera_factura"
-                    android:text="Tirar Leitura"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:ignore="MissingConstraints">
-                </Button>
+                </include>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/linear_submeter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/linear_factura_leitura"
+                android:layout_below="@+id/linear_factura_exibir_leitura"
                 android:padding="10dp">
 
                 <Button
@@ -484,6 +481,9 @@
                     android:layout_height="wrap_content"
                     tools:ignore="MissingConstraints" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
         </RelativeLayout>
     </ScrollView>
