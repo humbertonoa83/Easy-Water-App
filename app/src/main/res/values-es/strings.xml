@@ -45,5 +45,11 @@
     <string name="label_amount_recharger">" Ingrese la cantidad de recarga"</string>
     <string name="label_payment_method">" Método de pago"</string>
     <string name="label_buy">" Compra"</string>
+    <string name="label_payments">Pagos</string>
+    <string name="label_payment">Pago</string>
+    <string name="label_invoice">Factura</string>
+    <string name="label_yes">Si</string>
+    <string name="label_no">No</string>
+    <string name="label_confirm_logout">Estás seguro que quieres irte?</string>
 
 </resources>

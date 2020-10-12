@@ -14,24 +14,14 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-
 import com.google.android.material.navigation.NavigationView;
-
 import hp.com.planoalimentar.easy_water_app.R;
-import hp.com.planoalimentar.easy_water_app.billing.Billing;
-import hp.com.planoalimentar.easy_water_app.billing.View_Billing;
 import hp.com.planoalimentar.easy_water_app.breakdown.BreakdownFragment;
-import hp.com.planoalimentar.easy_water_app.client.Client;
-import hp.com.planoalimentar.easy_water_app.client.View_Client;
 import hp.com.planoalimentar.easy_water_app.client.datas.ClientDataFragment;
-import hp.com.planoalimentar.easy_water_app.employee.Employee;
-import hp.com.planoalimentar.easy_water_app.employee.View_Employee;
 import hp.com.planoalimentar.easy_water_app.info.About;
 import hp.com.planoalimentar.easy_water_app.payments.Payments;
-import hp.com.planoalimentar.easy_water_app.payments.View_Payments;
 import hp.com.planoalimentar.easy_water_app.profile.ProfileFragment;
 import hp.com.planoalimentar.easy_water_app.recharger.BuyRecharger;
-import hp.com.planoalimentar.easy_water_app.suspension.Suspension;
 
 /**
  * This is a product created by AEISUTC Team on
@@ -95,37 +85,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.profile:
                 fragmentClass = ProfileFragment.class;
                 break;
-
-            case R.id.add_client:
-                fragmentClass = Client.class;
-                break;
-            case R.id.add_employee:
-                fragmentClass = Employee.class;
-            break;
-
-            case R.id.add_billing:
-                fragmentClass = Billing.class;
-                break;
             case R.id.add_Payments:
                 fragmentClass = Payments.class;
                 break;
-            case R.id.add_suspension:
-                fragmentClass = Suspension.class;
-                break;
-            case R.id.view_client:
-                fragmentClass = View_Client.class;
-                break;
-            case R.id.view_employee:
-                fragmentClass = View_Employee.class;
-                break;
-            case R.id.view_billing:
-                fragmentClass = View_Billing.class;
-                break;
-
-            case R.id.view_Payments:
-                fragmentClass = View_Payments.class;
-                break;
-
             case R.id.info_about:
                 fragmentClass = About.class;
                 break;
@@ -136,14 +98,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle(R.string.app_name);
                 builder.setIcon(R.mipmap.ic_launcher);
-                builder.setMessage("Tem a certeza que deseja sair??")
+                builder.setMessage(getString(R.string.label_confirm_logout))
                         .setCancelable(false)
-                        .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                        .setPositiveButton(getString(R.string.label_yes), new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 finish();
                             }
                         })
-                        .setNegativeButton("Nao", new DialogInterface.OnClickListener() {
+                        .setNegativeButton(getString(R.string.label_no), new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 dialog.cancel();
                             }

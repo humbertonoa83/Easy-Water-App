@@ -45,4 +45,10 @@
     <string name="label_amount_recharger">Enter the recharge amount</string>
     <string name="label_payment_method">Payment method</string>
     <string name="label_buy">Buy</string>
+    <string name="label_payments">Payments</string>
+    <string name="label_payment">Payment</string>
+    <string name="label_invoice">Invoice</string>
+    <string name="label_yes">Yes</string>
+    <string name="label_no">No</string>
+    <string name="label_confirm_logout">Are you sure you want to leave?</string>
 </resources>

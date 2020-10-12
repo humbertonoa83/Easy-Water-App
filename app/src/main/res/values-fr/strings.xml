@@ -46,4 +46,10 @@
     <string name="label_payment_method">" Mode de paiement"</string>
     <string name="label_buy">Achat</string>
 
+    <string name="label_payments">Paiements</string>
+    <string name="label_payment">Paiement</string>
+    <string name="label_invoice">Facture d\'achat</string>
+    <string name="label_yes">Oui</string>
+    <string name="label_no">Non</string>
+    <string name="label_confirm_logout">Êtes-vous sûr de vouloir quitter?</string>
 </resources>
