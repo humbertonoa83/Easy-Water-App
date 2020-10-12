@@ -16,17 +16,13 @@
     <string name="label_painel">Painel</string>
     <string name="label_profile">Perfil</string>
     <string name="label_add" tools:ignore="MissingTranslation">Registro</string>
-    <string name="label_cliente" tools:ignore="MissingTranslation">Cliente</string>
-    <string name="label_employee" tools:ignore="MissingTranslation">Funcionario</string>
-    <string name="label_billing" tools:ignore="MissingTranslation">Factura</string>
-    <string name="label_payments" tools:ignore="MissingTranslation">Pagamento</string>
+    <string name="label_invoice" tools:ignore="MissingTranslation">Factura</string>
     <string name="label_suspension" tools:ignore="MissingTranslation">Suspensao</string>
 
     <string name="label_view" tools:ignore="MissingTranslation">Visualizar</string>
     <string name="label_view_client" tools:ignore="MissingTranslation">Cliente</string>
     <string name="label_view_employee" tools:ignore="MissingTranslation">Funcionario</string>
     <string name="label_view_billing" tools:ignore="MissingTranslation">Factura</string>
-    <string name="label_view_payments" tools:ignore="MissingTranslation">Pagamento</string>
     <string name="label_view_suspension" tools:ignore="MissingTranslation">Suspensao</string>
 
     <string name="label_info" tools:ignore="MissingTranslation">Informacao</string>
@@ -136,5 +132,10 @@
     <string name="corte_situacao" translatable="false">Situacao</string>
     <string name="corte_data" translatable="false">Data corte</string>
     <string name="corte_submeter" translatable="false">Submeter</string>
+    <string name="label_payments">Pagamentos</string>
+    <string name="label_payment">Pagamento</string>
+    <string name="label_yes">Sim</string>
+    <string name="label_no">Não</string>
+    <string name="label_confirm_logout">Tem a certeza que deseja sair?</string>
 
 </resources>

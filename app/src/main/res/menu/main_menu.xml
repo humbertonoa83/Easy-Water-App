@@ -47,67 +47,19 @@
         </item>
 
     <item android:id="@+id/add"
-        android:title="@string/label_client_add">
+        android:title="@string/label_payments">
         <menu>
             <group android:checkableBehavior="single">
-                <item android:id="@+id/add_client"
-                    android:title="@string/label_cliente"
-                    android:icon="@drawable/ic_person_black_24dp">
-                </item>
-                <item
-                    android:id="@+id/add_employee"
-                    android:title="@string/label_employee"
-                    android:icon="@drawable/ic_person_black_24dp">
-                </item>
+
                 <item
                     android:id="@+id/add_billing"
-                    android:title="@string/label_billing"
+                    android:title="@string/label_invoice"
                     android:icon="@drawable/ic__description_24">
                 </item>
                 <item
                     android:id="@+id/add_Payments"
-                    android:title="@string/label_payments"
+                    android:title="@string/label_payment"
                     android:icon="@drawable/ic_monetization_on_24">
-                </item>
-
-                <item
-                    android:id="@+id/add_suspension"
-                    android:title="@string/label_suspension"
-                    android:icon="@drawable/ic_remove_24">
-                </item>
-
-            </group>
-        </menu>
-    </item>
-
-    <item android:id="@+id/view"
-        android:title="@string/label_view">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item android:id="@+id/view_client"
-                    android:title="@string/label_view_client"
-                    android:icon="@drawable/ic_view_list_24">
-                </item>
-                <item
-                    android:id="@+id/view_employee"
-                    android:title="@string/label_view_employee"
-                    android:icon="@drawable/ic_view_list_24">
-                </item>
-                <item
-                    android:id="@+id/view_billing"
-                    android:title="@string/label_view_billing"
-                    android:icon="@drawable/ic_view_list_24">
-                </item>
-                <item
-                    android:id="@+id/view_Payments"
-                    android:title="@string/label_view_payments"
-                    android:icon="@drawable/ic_view_list_24">
-                </item>
-
-                <item
-                    android:id="@+id/view_suspension"
-                    android:title="@string/label_view_suspension"
-                    android:icon="@drawable/ic_view_list_24">
                 </item>
 
             </group>
