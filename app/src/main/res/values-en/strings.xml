@@ -51,4 +51,9 @@
     <string name="label_yes">Yes</string>
     <string name="label_no">No</string>
     <string name="label_confirm_logout">Are you sure you want to leave?</string>
+    <string name="label_client_surname">Surname</string>
+    <string name="label_contact_information">Contact information</string>
+    <string name="button_next">Next</string>
+    <string name="button_previous">Previous</string>
+    <string name="label_document_information">Document information</string>
 </resources>

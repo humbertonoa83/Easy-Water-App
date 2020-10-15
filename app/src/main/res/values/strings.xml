@@ -55,6 +55,7 @@
     <string name="label_payment_method">Método de pagamento</string>
     <string name="label_mpesa" translatable="false">M-Pesa</string>
     <string name="label_buy">Comprar</string>
+    <string name="label_document_information">Informação do documento</string>
 
     <string name="cliente_nome" translatable="false">Nome </string>
     <string name="cliente_apelido" translatable="false">Apelido </string>
@@ -137,5 +138,9 @@
     <string name="label_yes">Sim</string>
     <string name="label_no">Não</string>
     <string name="label_confirm_logout">Tem a certeza que deseja sair?</string>
+    <string name="label_client_surname">Apelido</string>
+    <string name="label_contact_information">Informações de contacto</string>
+    <string name="button_next">Próximo</string>
+    <string name="button_previous">Anterior</string>
 
 </resources>

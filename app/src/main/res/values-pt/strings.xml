@@ -52,4 +52,9 @@
     <string name="label_yes">Sim</string>
     <string name="label_no">Não</string>
     <string name="label_confirm_logout">Tem a certeza que deseja sair?</string>
+    <string name="label_client_surname">Apelido</string>
+    <string name="label_contact_information">Informações de contacto</string>
+    <string name="button_next">Próximo</string>
+    <string name="button_previous">Anterior</string>
+    <string name="label_document_information">Informação do documento</string>
 </resources>

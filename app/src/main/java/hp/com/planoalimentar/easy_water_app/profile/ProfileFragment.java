@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,8 @@ import hp.com.planoalimentar.easy_water_app.R;
  */
 public class ProfileFragment extends Fragment {
 
+    private FragmentTransaction fragmentTransaction;
+
     public ProfileFragment () {
         // Required empty public constructor
     }
@@ -27,6 +30,11 @@ public class ProfileFragment extends Fragment {
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        fragmentTransaction = getFragmentManager().beginTransaction();
+
+        fragmentTransaction.add(R.id.frame_layout, new ClientInformationFragment());
+        fragmentTransaction.commit();
 
         return view;
     }

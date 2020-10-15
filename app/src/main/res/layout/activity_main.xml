@@ -34,7 +34,7 @@
                app:navigationIcon="@drawable/ic_menu"/>
 
            <FrameLayout
-               android:id="@+id/frame_layout"
+               android:id="@+id/framelayout"
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:layout_below="@id/toolbar"/>
