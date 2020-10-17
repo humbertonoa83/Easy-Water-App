@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".invoice.InvoiceView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_billing_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/label_payment_id"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_payment_id"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person" />
+
+                <TextView
+                    android:id="@+id/txt_payment_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_id"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person"
+                    app:layout_constraintTop_toBottomOf="@+id/label_id" />
+
+                <EditText
+                    android:id="@+id/et_billing_id"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:maxLength="15"
+                    android:hint="ex: ADM123"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person"
+                    app:layout_constraintTop_toBottomOf="@+id/label_id">
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_billing_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_billing_id"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_person_billing_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_person_black_24dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_billing_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/label_client_name"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txt__billing_name"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_billing_name" />
+
+                <TextView
+                    android:id="@+id/txt__billing_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_billing_name"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_billing_name"
+                    app:layout_constraintTop_toBottomOf="@+id/label_billing_name" />
+
+                <EditText
+                    android:id="@+id/et_billing_name"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:maxLength="15"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="ex: Pedro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_billing_name"
+                    app:layout_constraintTop_toBottomOf="@+id/label_billing_name">
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_billing_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_billing_id"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:gravity="right"
+                    tools:ignore="MissingConstraints">
+                    <Button
+                        android:id="@+id/btn_billing_view"
+                        android:layout_width="40dp"
+                        android:background="@drawable/ic_baseline_add_box_24"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:layout_height="wrap_content"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_billing_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_billing_view"
+                android:padding="10dp">
+                <ScrollView
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/list_payments"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+                </ScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_billing_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_billing_list"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/btn_billing_submit"
+                    android:layout_width="match_parent"
+                    android:text="@string/label_payment_submit"
+                    android:textStyle="bold"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>
