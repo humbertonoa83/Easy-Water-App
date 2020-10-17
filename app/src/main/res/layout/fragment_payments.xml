@@ -16,10 +16,9 @@
             android:padding="10dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linear_pagamento_codigo"
+                android:id="@+id/linear_payment_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/relative2"
                 android:padding="10dp">
 
                     <ImageView
@@ -32,29 +31,29 @@
                         app:layout_constraintTop_toBottomOf="parent" />
 
                     <TextView
-                        android:id="@+id/label_codigo"
+                        android:id="@+id/label_id"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
-                        android:text="@string/pagamento_codigo"
+                        android:text="@string/label_payment_id"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintBottom_toTopOf="@+id/txt_pagamento_codigo"
+                        app:layout_constraintBottom_toTopOf="@+id/txt_payment_id"
                         app:layout_constraintLeft_toRightOf="@+id/ic_person" />
 
                     <TextView
-                        android:id="@+id/txt_pagamento_codigo"
+                        android:id="@+id/txt_payment_id"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/label_codigo"
+                        android:layout_below="@id/label_id"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
                         app:layout_constraintLeft_toRightOf="@+id/ic_person"
-                        app:layout_constraintTop_toBottomOf="@+id/label_codigo" />
+                        app:layout_constraintTop_toBottomOf="@+id/label_id" />
 
                     <EditText
-                        android:id="@+id/et_pagamento_codigo"
+                        android:id="@+id/et_payment_id"
                         android:orientation="vertical"
                         android:layout_marginLeft="30dp"
                         android:maxLength="15"
@@ -62,18 +61,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:layout_constraintLeft_toRightOf="@+id/ic_person"
-                        app:layout_constraintTop_toBottomOf="@+id/label_codigo">
+                        app:layout_constraintTop_toBottomOf="@+id/label_id">
                     </EditText>
         </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linear_pagamento_nome"
+                android:id="@+id/linear_payment_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/linear_pagamento_codigo"
+                android:layout_below="@+id/linear_payment_id"
                 android:padding="10dp">
 
                 <ImageView
-                    android:id="@+id/ic_person_pagamento_nome"
+                    android:id="@+id/ic_person_payment_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/ic_person_black_24dp"
@@ -82,29 +81,29 @@
                     app:layout_constraintTop_toBottomOf="parent" />
 
                 <TextView
-                    android:id="@+id/label_pagamento_nome"
+                    android:id="@+id/label_payment_name"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:text="@string/pagamento_nome"
+                    android:text="@string/label_payment_name"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/txt__pagamento_nome"
-                    app:layout_constraintLeft_toRightOf="@+id/ic_person_pagamento_nome" />
+                    app:layout_constraintBottom_toTopOf="@+id/txt__payment_name"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_payment_name" />
 
                 <TextView
-                    android:id="@+id/txt__pagamento_nome"
+                    android:id="@+id/txt__payment_name"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/label_pagamento_nome"
+                    android:layout_below="@id/label_payment_name"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    app:layout_constraintLeft_toRightOf="@+id/ic_person_pagamento_nome"
-                    app:layout_constraintTop_toBottomOf="@+id/label_pagamento_nome" />
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_payment_name"
+                    app:layout_constraintTop_toBottomOf="@+id/label_payment_name" />
 
                 <EditText
-                    android:id="@+id/et_pagamento_nome"
+                    android:id="@+id/et_payment_name"
                     android:orientation="vertical"
                     android:layout_marginLeft="30dp"
                     android:maxLength="15"
@@ -112,16 +111,16 @@
                     android:hint="ex: Jamal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintLeft_toRightOf="@+id/ic_person_pagamento_nome"
-                    app:layout_constraintTop_toBottomOf="@+id/label_pagamento_nome">
+                    app:layout_constraintLeft_toRightOf="@+id/ic_person_payment_name"
+                    app:layout_constraintTop_toBottomOf="@+id/label_payment_name">
                 </EditText>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linear_pagamento_exibir"
+                android:id="@+id/linear_payment_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/linear_pagamento_codigo"
+                android:layout_below="@+id/linear_payment_name"
                 android:padding="10dp">
 
                 <LinearLayout
@@ -132,7 +131,7 @@
                     android:gravity="right"
                     tools:ignore="MissingConstraints">
                     <Button
-                        android:id="@+id/btn_pagamento_exibir"
+                        android:id="@+id/btn_payment_view"
                         android:layout_width="40dp"
                         android:background="@drawable/ic_baseline_add_box_24"
                         android:textStyle="bold"
@@ -144,10 +143,10 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linear_pagamento_lista"
+                android:id="@+id/linear_payment_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/linear_pagamento_nome"
+                android:layout_below="@+id/linear_payment_name"
                 android:padding="10dp">
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -160,16 +159,16 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linear_pagamento_submeter"
+                android:id="@+id/linear_payment_submit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/linear_pagamento_lista"
+                android:layout_below="@+id/linear_payment_list"
                 android:padding="10dp">
 
                 <Button
-                    android:id="@+id/btn_submeter_pagamento"
+                    android:id="@+id/btn_payment_submit"
                     android:layout_width="match_parent"
-                    android:text="@string/pagamento_submeter"
+                    android:text="@string/label_payment_submit"
                     android:textStyle="bold"
                     android:background="@color/colorPrimary"
                     android:textColor="@android:color/white"
