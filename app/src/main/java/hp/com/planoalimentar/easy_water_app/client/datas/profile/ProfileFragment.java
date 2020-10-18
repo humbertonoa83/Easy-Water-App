@@ -1,7 +1,5 @@
-package hp.com.planoalimentar.easy_water_app.profile;
+package hp.com.planoalimentar.easy_water_app.client.datas.profile;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;

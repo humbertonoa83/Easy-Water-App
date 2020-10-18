@@ -1,4 +1,4 @@
-package hp.com.planoalimentar.easy_water_app.profile;
+package hp.com.planoalimentar.easy_water_app.client.datas.profile;
 
 import android.os.Bundle;
 

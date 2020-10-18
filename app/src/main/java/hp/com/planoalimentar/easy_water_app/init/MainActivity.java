@@ -3,7 +3,13 @@ package hp.com.planoalimentar.easy_water_app.init;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -14,12 +20,21 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import com.google.android.material.navigation.NavigationView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import hp.com.planoalimentar.easy_water_app.R;
+import hp.com.planoalimentar.easy_water_app.api.statics.ApiRequest;
+import hp.com.planoalimentar.easy_water_app.api.statics.CallBack;
 import hp.com.planoalimentar.easy_water_app.breakdown.BreakdownFragment;
+import hp.com.planoalimentar.easy_water_app.client.ClientBean;
 import hp.com.planoalimentar.easy_water_app.client.datas.ClientDataFragment;
+import hp.com.planoalimentar.easy_water_app.client.routes.ClientRoutes;
 import hp.com.planoalimentar.easy_water_app.info.About;
 import hp.com.planoalimentar.easy_water_app.payments.Payments;
-import hp.com.planoalimentar.easy_water_app.profile.ProfileFragment;
+import hp.com.planoalimentar.easy_water_app.client.datas.profile.ProfileFragment;
 import hp.com.planoalimentar.easy_water_app.recharger.BuyRecharger;
 
 /**
@@ -34,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private Toolbar toolbar;
+    private JSONObject jsonObject;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -46,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigation_header_container);
         toolbar = findViewById(R.id.toolbar);
-
+        jsonObject = new JSONObject();
 
         setSupportActionBar(toolbar);
 
@@ -56,6 +72,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toogle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
+
+        ApiRequest.makeGETRequest(getApplicationContext(), ClientRoutes.getClientInformation("1"), jsonObject, new CallBack() {
+
+            @Override
+            public void responce (String responce) {
+                parseInformation(responce);
+            }
+        });
+    }
+
+    private void parseInformation (String responce) {
+        System.out.println("Entrei");
+        try {
+            JSONObject jsonObject=new JSONObject(responce);
+            System.out.println("Object "+ responce);
+
+            //ClientBean clientBean = (ClientBean) jsonObject.getJSONObject();
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override

@@ -5,26 +5,29 @@ package hp.com.planoalimentar.easy_water_app.api.statics;
  * Matyanga Project concurs
  * Created by humbertonoa83@gmail.com on 10/10/2020.
  */
-enum ApiRoutes implements ApiRoutesInterface{
+public enum ApiRoutes implements ApiRoutesInterface{
+
     CLIENTS{
         @Override
         public String path () {
 
-            return "clients/";
+            return Path.getAddress()+"clients/";
         }
     },
     BREAKDOWN {
         @Override
         public String path () {
 
-            return "breakdowns/";
+            return Path.getAddress()+"breakdowns/";
         }
     },
     CLIENTTYPE {
         @Override
         public String path () {
 
-            return "client-types/";
+            return Path.getAddress()+"client-types/";
         }
-    }
+    };
+
+
 }
