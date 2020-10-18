@@ -67,4 +67,9 @@
     <string name="label_payment_id">Client identification</string>
     <string name="label_payment_name">Client name</string>
     <string name="label_payment_submit">Submit</string>
+    <string name="email_required">Email required</string>
+    <string name="password_required">Password required</string>
+    <string name="minimal_password">Password must be longer than 8 characters</string>
+    <string name="message_wait">Please wait</string>
+    <string name="invalid_credentials">Invalid credentials</string>
 </resources>

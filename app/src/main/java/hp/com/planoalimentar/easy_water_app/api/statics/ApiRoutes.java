@@ -27,7 +27,23 @@ public enum ApiRoutes implements ApiRoutesInterface{
 
             return Path.getAddress()+"client-types/";
         }
-    };
+    },
+    LOGIN{
+        @Override
+        public String path () {
+
+            return Path.getAddress()+"login/";
+        }
+    },
+    LOGOUT{
+        @Override
+        public String path () {
+
+            return Path.getAddress()+"logout/";
+        }
+    }
+    ;
+
 
 
 }

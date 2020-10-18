@@ -11,9 +11,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import hp.com.planoalimentar.easy_water_app.R;
-import hp.com.planoalimentar.easy_water_app.profile.ClientContactFragment;
-import hp.com.planoalimentar.easy_water_app.profile.ClientInformationFragment;
-
 public class InvoiceView extends Fragment {
 
     private FragmentTransaction fragmentTransaction;

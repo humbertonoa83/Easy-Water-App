@@ -11,7 +11,7 @@ class Path {
         API server
         just change here
      */
-    private static String address ="192.168.1.15/8000/api/";
+    private static String address ="http://172.20.10.10:80/api/";
 
 
     protected static String getAddress () {

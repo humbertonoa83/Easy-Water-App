@@ -86,6 +86,11 @@
     <string name="label_info_about"  >Acerca de</string>
     <string name="label_info_exit" >Sair</string>
     <string name="label_add">Registro</string>
+    <string name="email_required">Email obrigatório</string>
+    <string name="password_required">Palavra-passe obrigatória</string>
+    <string name="minimal_password">A palavra-passe deve ser maior que 8 caracteres</string>
+    <string name="message_wait">Aguarde</string>
+    <string name="invalid_credentials">Credenciais inválidas</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

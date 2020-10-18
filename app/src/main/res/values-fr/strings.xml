@@ -68,4 +68,9 @@
     <string name="label_payment_id">Code client</string>
     <string name="label_payment_name">Nom du client</string>
     <string name="label_payment_submit">Entregar</string>
+    <string name="email_required">Email requis</string>
+    <string name="password_required">Mot de passe requis</string>
+    <string name="minimal_password">Le mot de passe doit comporter plus de 8 caractères</string>
+    <string name="message_wait">Attendre</string>
+    <string name="invalid_credentials">Les informations d\'identification invalides</string>
 </resources>

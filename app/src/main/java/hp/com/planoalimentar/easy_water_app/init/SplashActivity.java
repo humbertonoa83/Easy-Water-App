@@ -10,6 +10,7 @@ import android.view.WindowManager;
 
 import hp.com.planoalimentar.easy_water_app.R;
 import hp.com.planoalimentar.easy_water_app.auth.LoginActivity;
+import hp.com.planoalimentar.easy_water_app.store.preferences.StorePreferences;
 
 /**
  * This is a product created by AEISUTC Team on
@@ -21,6 +22,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private CountDownTimer countDownTimer;
     private Intent intent;
+    private StorePreferences storePreferences;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -31,6 +33,8 @@ public class SplashActivity extends AppCompatActivity {
         getWindow().setStatusBarColor(Color.TRANSPARENT);
         setContentView(R.layout.activity_splash);
 
+        storePreferences = new StorePreferences(getApplicationContext());
+
         countDownTimer = new CountDownTimer(1500, 500){
 
             @Override
@@ -40,7 +44,11 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void onFinish () {
-                intent = new Intent(getApplicationContext(), LoginActivity.class);
+                if(storePreferences.isLoggedIn()){
+                    intent = new Intent(getApplicationContext(), MainActivity.class);
+                }else{
+                    intent = new Intent(getApplicationContext(), LoginActivity.class);
+                }
                 startActivity(intent);
                 overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
                 finish();

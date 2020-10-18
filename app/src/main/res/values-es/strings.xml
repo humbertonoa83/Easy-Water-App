@@ -67,5 +67,10 @@
     <string name="label_payment_id">Codigo del cliente</string>
     <string name="label_payment_submit">Soumettre</string>
     <string name="label_payment_name">Nombre del cliente</string>
+    <string name="email_required">Correo electronico requerido</string>
+    <string name="password_required">Se requiere contraseña</string>
+    <string name="minimal_password">La contraseña debe tener más de 8 caracteres</string>
+    <string name="message_wait">Espere</string>
+    <string name="invalid_credentials">Credenciales no válidas</string>
 
 </resources>
