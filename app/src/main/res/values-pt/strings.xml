@@ -57,4 +57,15 @@
     <string name="button_next">Próximo</string>
     <string name="button_previous">Anterior</string>
     <string name="label_document_information">Informação do documento</string>
+    <string name="label_info_exit">Sair</string>
+    <string name="label_info_about">Acerca de</string>
+    <string name="label_info">Informação</string>
+    <string name="label_invoice_entity">Entidade</string>
+    <string name="label_invoice_amount">Montante</string>
+    <string name="label_invoice_reference">Referência</string>
+    <string name="label_back">Voltar</string>
+    <string name="label_client_primary_phone">"Telefone principal "</string>
+    <string name="label_payment_id">Codigo cliente</string>
+    <string name="label_payment_name">Nome cliente</string>
+    <string name="label_payment_submit">Submeter</string>
 </resources>
