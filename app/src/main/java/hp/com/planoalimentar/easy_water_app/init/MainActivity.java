@@ -1,6 +1,7 @@
 package hp.com.planoalimentar.easy_water_app.init;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -20,14 +22,17 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import com.google.android.material.navigation.NavigationView;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import hp.com.planoalimentar.easy_water_app.R;
 import hp.com.planoalimentar.easy_water_app.api.statics.ApiRequest;
 import hp.com.planoalimentar.easy_water_app.api.statics.CallBack;
+import hp.com.planoalimentar.easy_water_app.api.statics.Constants;
+import hp.com.planoalimentar.easy_water_app.auth.LoginActivity;
 import hp.com.planoalimentar.easy_water_app.breakdown.BreakdownFragment;
 import hp.com.planoalimentar.easy_water_app.client.ClientBean;
 import hp.com.planoalimentar.easy_water_app.client.datas.ClientDataFragment;
@@ -37,6 +42,8 @@ import hp.com.planoalimentar.easy_water_app.invoice.InvoiceView;
 import hp.com.planoalimentar.easy_water_app.payments.Payments;
 import hp.com.planoalimentar.easy_water_app.client.datas.profile.ProfileFragment;
 import hp.com.planoalimentar.easy_water_app.recharger.BuyRecharger;
+import hp.com.planoalimentar.easy_water_app.store.preferences.StorePreferences;
+import hp.com.planoalimentar.easy_water_app.user.routes.UserLoginRoutes;
 
 /**
  * This is a product created by AEISUTC Team on
@@ -51,6 +58,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private NavigationView navigationView;
     private Toolbar toolbar;
     private JSONObject jsonObject;
+    private StorePreferences storePreferences;
+    private ClientBean client;
+    private TextView txtUsername;
+    private String token;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -60,19 +71,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        drawerLayout = findViewById(R.id.drawerLayout);
-        navigationView = findViewById(R.id.navigation_header_container);
-        toolbar = findViewById(R.id.toolbar);
-        jsonObject = new JSONObject();
-
-        setSupportActionBar(toolbar);
-
-        navigationView.bringToFront();
-        ActionBarDrawerToggle toogle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawerLayout.addDrawerListener(toogle);
-        toogle.syncState();
-
-        navigationView.setNavigationItemSelectedListener(this);
+        init();
 
         ApiRequest.makeGETRequest(getApplicationContext(), ClientRoutes.getClientInformation("1"), jsonObject, new CallBack() {
 
@@ -81,16 +80,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 parseInformation(responce);
             }
         });
+
+
     }
 
     private void parseInformation (String responce) {
-        System.out.println("Entrei");
         try {
-            JSONObject jsonObject=new JSONObject(responce);
-            System.out.println("Object "+ responce);
 
-            //ClientBean clientBean = (ClientBean) jsonObject.getJSONObject();
+            Gson gson = new GsonBuilder().create();
+            client = gson.fromJson((new JSONObject(responce)).getJSONObject("client").toString(), ClientBean.class);
 
+            System.out.println("Nome: "+client.getName());
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -134,8 +134,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragmentClass = About.class;
                 break;
             case R.id.info_exit:
-               // android.os.Process.killProcess(android.os.Process.myPid());
-                //System.exit(1);
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle(R.string.app_name);
@@ -144,7 +142,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .setCancelable(false)
                         .setPositiveButton(getString(R.string.label_yes), new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                finish();
+                                logout();
+
+                                dialog.cancel();
                             }
                         })
                         .setNegativeButton(getString(R.string.label_no), new DialogInterface.OnClickListener() {
@@ -178,6 +178,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }
 
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("client", client);
+        fragment.setArguments(bundle);
+
         // Insert the fragment by replacing any existing fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.framelayout, fragment).commit();
@@ -188,6 +192,58 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setTitle(menuItem.getTitle());
         // Close the navigation drawer
         drawerLayout.closeDrawers();
+    }
+
+    private void logout () {
+
+        JSONObject paremeters = new JSONObject();
+
+        ApiRequest.makePOSTRequest(getApplicationContext(), UserLoginRoutes.makeLogout(), paremeters,new CallBack(){
+
+            @Override
+            public void responce (String responce) {
+                try {
+                    JSONObject jsonObject = new JSONObject(responce);
+                    if(jsonObject.getBoolean(Constants.SUCCESS)){
+                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+                        finish();
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), getString(R.string.logout_error), Toast.LENGTH_LONG).show();
+                    }
+                }catch (JSONException exception){
+                    exception.printStackTrace();
+                }
+
+
+            }
+        });
+
+    }
+
+    private void init(){
+
+        drawerLayout = findViewById(R.id.drawerLayout);
+        navigationView = findViewById(R.id.navigation_header_container);
+        toolbar = findViewById(R.id.toolbar);
+        jsonObject = new JSONObject();
+
+        storePreferences = new StorePreferences(getApplicationContext());
+        token = storePreferences.getToken();
+        //txtUsername = findViewById(R.id.username);
+        //txtUsername.setText(storePreferences.getUsername());
+
+        setSupportActionBar(toolbar);
+
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toogle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toogle);
+        toogle.syncState();
+
+        navigationView.setNavigationItemSelectedListener(this);
+
     }
 
 }

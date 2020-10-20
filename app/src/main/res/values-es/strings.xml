@@ -72,5 +72,8 @@
     <string name="minimal_password">La contraseña debe tener más de 8 caracteres</string>
     <string name="message_wait">Espere</string>
     <string name="invalid_credentials">Credenciales no válidas</string>
+    <string name="logout_error">Error al cerrar sesión</string>
+    <string name="label_gender">Género</string>
+    <string name="label_nacionality">Nacionalidad</string>
 
 </resources>

@@ -1,5 +1,7 @@
 package hp.com.planoalimentar.easy_water_app.api.statics;
 
+import org.json.JSONException;
+
 /**
  * This is a product created by AEISUTC Team on
  * Matyanga Project concurs

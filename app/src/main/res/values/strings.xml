@@ -91,6 +91,9 @@
     <string name="minimal_password">A palavra-passe deve ser maior que 8 caracteres</string>
     <string name="message_wait">Aguarde</string>
     <string name="invalid_credentials">Credenciais inválidas</string>
+    <string name="logout_error">Erro ao terminar a sessão</string>
+    <string name="label_gender">Género</string>
+    <string name="label_nacionality">Nacionalidade</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

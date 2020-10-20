@@ -60,10 +60,8 @@ public class LoginActivity extends AppCompatActivity {
                         login();
                     } catch (JSONException e) {
                         e.printStackTrace();
-                        Toast.makeText(getApplicationContext(), "",Toast.LENGTH_LONG).show();
                     }
                 }
-                    //startActivity(intent);
             }
         });
     }
@@ -75,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
         paremeters.put("email", txtEmail.getText().toString().trim());
         paremeters.put("password", txtPass.getText().toString());
 
-        ApiRequest.makePOSTRequest(getApplicationContext(), UserLoginRoutes.makeLogin(), paremeters,new CallBack(){
+        ApiRequest.makePOSTLogin(getApplicationContext(), UserLoginRoutes.makeLogin(), paremeters,new CallBack(){
 
             @Override
             public void responce (String responce) {
@@ -91,6 +89,7 @@ public class LoginActivity extends AppCompatActivity {
             if(jsonObject.getBoolean(Constants.SUCCESS)){
                 String token = jsonObject.getString(Constants.TOKEN);
                 storePreferences.setLoggedIn();
+                System.out.println("Token: "+token);
                 storePreferences.storeToken(token);
 
                 intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -101,9 +100,11 @@ public class LoginActivity extends AppCompatActivity {
             else{
                 layoutEmail.setError(getString(R.string.invalid_credentials));
                 layoutPass.setError(getString(R.string.invalid_credentials));
+                progressDialog.dismiss();
             }
         }catch (JSONException exception){
             exception.printStackTrace();
+            progressDialog.dismiss();
         }
     }
 

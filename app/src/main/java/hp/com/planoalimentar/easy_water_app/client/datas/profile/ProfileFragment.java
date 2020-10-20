@@ -20,6 +20,8 @@ public class ProfileFragment extends Fragment {
 
     private FragmentTransaction fragmentTransaction;
 
+    private Bundle bundle;
+
     public ProfileFragment () {
         // Required empty public constructor
     }
@@ -29,9 +31,23 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
+        bundle = this.getArguments();
+
+        Class fragmentClass =ClientInformationFragment.class;
+        Fragment fragment = null;
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (java.lang.InstantiationException e) {
+            e.printStackTrace();
+        }
+
+        fragment.setArguments(bundle);
+
         fragmentTransaction = getFragmentManager().beginTransaction();
 
-        fragmentTransaction.add(R.id.frame_layout, new ClientInformationFragment());
+        fragmentTransaction.add(R.id.frame_layout, fragment);
         fragmentTransaction.commit();
 
         return view;

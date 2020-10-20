@@ -141,10 +141,108 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linear_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_surname"
+                    android:layout_marginTop="15dp"
+                    android:padding="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ic_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_baseline_wc"
+                        app:layout_constraintBottom_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/label_gender"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="8dp"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_gender"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/txt_client_gender"
+                        app:layout_constraintLeft_toRightOf="@+id/ic_gender"/>
+                    <TextView
+                        android:id="@+id/txt_client_gender"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/label_gender"
+                        app:layout_constraintLeft_toRightOf="@+id/ic_gender"
+                        app:layout_constraintTop_toBottomOf="@+id/label_gender"
+                        />
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1px"
+                        android:background="@color/colorViewSeparator"
+                        app:layout_constraintStart_toStartOf="@+id/label_gender"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_client_gender"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linear_nacionality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_gender"
+                    android:layout_marginTop="15dp"
+                    android:padding="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ic_nacionality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_baseline_language"
+                        app:layout_constraintBottom_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/label_nacionality"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="8dp"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_nacionality"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/txt_client_nacionality"
+                        app:layout_constraintLeft_toRightOf="@+id/ic_nacionality"/>
+                    <TextView
+                        android:id="@+id/txt_client_nacionality"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/label_nacionality"
+                        app:layout_constraintLeft_toRightOf="@+id/ic_nacionality"
+                        app:layout_constraintTop_toBottomOf="@+id/label_nacionality"
+                        />
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1px"
+                        android:background="@color/colorViewSeparator"
+                        app:layout_constraintStart_toStartOf="@+id/label_nacionality"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_client_nacionality"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/linear_surname"
+                    android:layout_below="@+id/linear_nacionality"
                     android:id="@+id/btn_next"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="10dp"

@@ -3,6 +3,8 @@ package hp.com.planoalimentar.easy_water_app.store.preferences;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import hp.com.planoalimentar.easy_water_app.user.UserBean;
+
 /**
  * This is a product created by AEISUTC Team on
  * Matyanga Project concurs
@@ -25,6 +27,12 @@ public class StorePreferences {
 
     //Token
     private final static  String TOKEN = "token";
+
+    //User attributes
+    private final static String USER_ID = "user_id";
+    private final static String USER_AVATAR = "user_avatar";
+    private final static String USER_NAME = "user_name";
+    private final static String USER_EMAIL = "user_email";
 
     public StorePreferences(Context context){
 
@@ -57,11 +65,55 @@ public class StorePreferences {
      * */
     public void storeToken(String token){
         SharedPreferences.Editor editor =  sharedPreferences.edit();
-        editor.putString(TOKEN, "");
+        editor.putString(TOKEN, token);
         editor.commit();
         editor.apply();
     }
 
+    /**
+     * Get the User whose Logged in
+     *
+     * @return UserBean
+     * */
+    public UserBean getUser(){
+        UserBean user = new UserBean();
 
+        user.setId(sharedPreferences.getString(USER_ID, ""));
+        user.setName(sharedPreferences.getString(USER_NAME, ""));
+        user.setEmail(sharedPreferences.getString(USER_EMAIL, ""));
+        user.setAvatar(sharedPreferences.getString(USER_AVATAR, ""));
+        return user;
+    }
+
+    /**
+     * Store the Login Token
+     * @param user
+     * @return void
+     * */
+    public void storeUser(UserBean user){
+        SharedPreferences.Editor editor =  sharedPreferences.edit();
+        editor.putString(USER_ID, "");
+        editor.putString(USER_NAME, "");
+        editor.putString(USER_EMAIL, "");
+        editor.putString(USER_AVATAR, "");
+        editor.commit();
+        editor.apply();
+    }
+
+    /**
+     * Get the User Token
+     * @return String
+     * */
+    public String getToken(){
+        return sharedPreferences.getString(TOKEN, "");
+    }
+
+    /**
+     * Get the User Token
+     * @return String
+     * */
+    public String getUsername(){
+        return sharedPreferences.getString(USER_NAME, "");
+    }
 
 }

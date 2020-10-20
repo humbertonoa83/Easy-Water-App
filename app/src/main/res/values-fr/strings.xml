@@ -73,4 +73,7 @@
     <string name="minimal_password">Le mot de passe doit comporter plus de 8 caractères</string>
     <string name="message_wait">Attendre</string>
     <string name="invalid_credentials">Les informations d\'identification invalides</string>
+    <string name="logout_error">Erreur de déconnexion</string>
+    <string name="label_gender">Genre</string>
+    <string name="label_nacionality">Nationalité</string>
 </resources>

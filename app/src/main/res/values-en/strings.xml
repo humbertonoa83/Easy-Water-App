@@ -72,4 +72,7 @@
     <string name="minimal_password">Password must be longer than 8 characters</string>
     <string name="message_wait">Please wait</string>
     <string name="invalid_credentials">Invalid credentials</string>
+    <string name="logout_error">Error signing out</string>
+    <string name="label_gender">Gender</string>
+    <string name="label_nacionality">Nacionality</string>
 </resources>
