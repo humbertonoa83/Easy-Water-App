@@ -85,6 +85,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void parseData (String responce) {
         try {
+            System.out.println("Response "+responce);
             JSONObject jsonObject = new JSONObject(responce);
             if(jsonObject.getBoolean(Constants.SUCCESS)){
                 String token = jsonObject.getString(Constants.TOKEN);

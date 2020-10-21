@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_background_shape"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    tools:context=".recharger.RechargeReceiptActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/successful_purchase"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/title"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="50dp"
+        android:id="@+id/separator"
+        android:layout_marginEnd="50dp"
+        android:background="@color/colorPrimary"/>
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_below="@+id/separator"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/image_logo"
+                android:layout_width="90dp"
+                android:layout_height="60dp"
+                android:src="@drawable/logo_aguamaputowhite"/>
+        </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:paddingTop="10dp"
+                android:id="@+id/label_reference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_reference"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:paddingTop="10dp"
+                android:id="@+id/txt_reference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_reference"
+                />
+
+            <TextView
+                android:paddingTop="10dp"
+                android:id="@+id/label_recharger_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_ammount"
+                android:layout_below="@id/txt_reference"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:paddingTop="10dp"
+                android:id="@+id/txt_recharger_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_recharger_value"
+                />
+
+            <TextView
+                android:paddingTop="10dp"
+                android:id="@+id/label_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_payment_method"
+                android:layout_below="@id/txt_recharger_value"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:paddingTop="10dp"
+                android:id="@+id/txt_payment_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_payment"
+                />
+
+
+            <TextView
+                android:id="@+id/label_recharger_code"
+                android:paddingTop="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recharger_code"
+                android:layout_below="@id/txt_payment_method"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:paddingTop="10dp"
+                android:id="@+id/txt_recharger_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_recharger_code"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:lines="2"
+                android:gravity="center"
+                android:letterSpacing="0.9"
+                />
+
+            <TextView
+                android:paddingTop="10dp"
+                android:id="@+id/txt_hour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_recharger_code"
+                />
+
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/Goback"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="@id/title"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_close"/>
+
+</RelativeLayout>

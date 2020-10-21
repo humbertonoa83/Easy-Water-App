@@ -27,6 +27,12 @@ public enum ApiRoutes implements ApiRoutesInterface{
 
             return Path.getAddress()+"client-types/";
         }
+    },RECHARGER {
+        @Override
+        public String path () {
+
+            return Path.getAddress()+"rechargers/";
+        }
     },
     LOGIN{
         @Override

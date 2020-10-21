@@ -8,8 +8,8 @@ package hp.com.planoalimentar.easy_water_app.api.statics;
 class Path {
 
     /*This is the address of the
-        API server
-        just change here
+     *  API server
+     *  just change here
      */
     private static String address ="http://192.168.137.1:80/api/";
 

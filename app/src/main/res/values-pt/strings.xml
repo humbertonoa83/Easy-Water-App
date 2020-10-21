@@ -76,4 +76,15 @@
     <string name="logout_error">Erro ao terminar a sessão</string>
     <string name="label_gender">Género</string>
     <string name="label_nacionality">Nacionalidade</string>
+    <string name="label_reason">Motivo</string>
+    <string name="label_occur_number">Número de ocorrências</string>
+    <string name="required_field">Campo obrigatório</string>
+    <string name="operation_success">Operação realizada com sucesso</string>
+    <string name="label_credit_card">Cartão de crédito</string>
+    <string name="label_account_number">Número da conta</string>
+    <string name="invalid_value">Valor inválido</string>
+    <string name="successful_purchase">Compra efectuada com sucesso</string>
+    <string name="recharger_code">Código da recarga</string>
+    <string name="label_reference">Referência</string>
+    <string name="label_ammount">Montante</string>
 </resources>

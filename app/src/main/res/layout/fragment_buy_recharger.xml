@@ -45,6 +45,7 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_recharger_value"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
@@ -71,14 +72,40 @@
                 android:layout_below="@id/txt_payment">
 
                 <RadioButton
-                    android:id="@+id/radio_button_5"
+                    android:id="@+id/rdbtn_Mpesa"
                     android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/label_mpesa"/>
 
+                <RadioButton
+                    android:id="@+id/rdbtn_credit_card"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/label_credit_card"/>
+
 
             </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/account_number"
+                android:layout_below="@+id/group_payment"
+                android:hint="@string/label_account_number"
+                android:layout_margin="15dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_account_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btn_buy"
@@ -86,8 +113,8 @@
                 android:layout_margin="10dp"
                 android:text="@string/label_buy"
                 android:textStyle="bold"
-                android:layout_below="@+id/group_payment"
-                android:background="@color/colorPrimary"
+                android:layout_below="@+id/account_number"
+                android:background="@drawable/rounded_button"
                 android:textColor="@android:color/white"
                 android:layout_height="wrap_content" />
 

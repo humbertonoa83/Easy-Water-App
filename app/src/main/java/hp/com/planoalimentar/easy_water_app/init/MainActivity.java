@@ -89,8 +89,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             Gson gson = new GsonBuilder().create();
             client = gson.fromJson((new JSONObject(responce)).getJSONObject("client").toString(), ClientBean.class);
-
-            System.out.println("Nome: "+client.getName());
         } catch (JSONException e) {
             e.printStackTrace();
         }

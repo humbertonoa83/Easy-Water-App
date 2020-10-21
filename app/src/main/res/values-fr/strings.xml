@@ -76,4 +76,15 @@
     <string name="logout_error">Erreur de déconnexion</string>
     <string name="label_gender">Genre</string>
     <string name="label_nacionality">Nationalité</string>
+    <string name="label_reason">Raison</string>
+    <string name="label_occur_number">Nombre d\'occurrences</string>
+    <string name="required_field">Champs requis</string>
+    <string name="operation_success">Opération effectuée avec succès</string>
+    <string name="label_credit_card">Carte de crédit</string>
+    <string name="label_account_number">Numéro de compte</string>
+    <string name="invalid_value">Valeur invalide</string>
+    <string name="successful_purchase">Achat réussi</string>
+    <string name="recharger_code">Code de recharge</string>
+    <string name="label_ammount">Montant</string>
+    <string name="label_reference">Référence</string>
 </resources>

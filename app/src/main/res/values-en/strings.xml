@@ -75,4 +75,15 @@
     <string name="logout_error">Error signing out</string>
     <string name="label_gender">Gender</string>
     <string name="label_nacionality">Nacionality</string>
+    <string name="label_reason">Reason</string>
+    <string name="label_occur_number">Number of Occurrences</string>
+    <string name="required_field">Required field</string>
+    <string name="operation_success">Operation performed successfully</string>
+    <string name="label_credit_card">Credit card</string>
+    <string name="label_account_number">Account number</string>
+    <string name="invalid_value">Invalid value</string>
+    <string name="successful_purchase">Successful purchase</string>
+    <string name="recharger_code">Recharger code</string>
+    <string name="label_reference">Reference</string>
+    <string name="label_ammount">" Amount"</string>
 </resources>

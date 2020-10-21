@@ -12,4 +12,5 @@ public class Constants {
 
     //Token name coming fromAPI
     public static String TOKEN = "token";
+
 }

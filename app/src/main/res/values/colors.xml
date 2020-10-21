@@ -10,5 +10,7 @@
     <color name="black">#000000</color>
     <color name="colorBackground">@color/white</color>
     <color name="colorViewSeparator">#6B818C</color>
+    <color name="color_text_light">#666D7E</color>
+    <color name="graycolor">#D3D3D3</color>
 
 </resources>
