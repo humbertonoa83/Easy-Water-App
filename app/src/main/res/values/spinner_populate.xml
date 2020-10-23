@@ -5,9 +5,24 @@
         <item>Pos Pago</item>
     </string-array>
 
-    <string-array name="situacao">
-        <item>Corte fornecimento</item>
-        <item>Suspensao fornecimento</item>
+    <string-array name="status">
+        <item>concluded</item>
+        <item>not completed</item>
+    </string-array>
+
+    <string-array name="month">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
     </string-array>
 
 </resources>

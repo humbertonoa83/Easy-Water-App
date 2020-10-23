@@ -106,6 +106,15 @@
     <string name="label_reference">Referência</string>
     <string name="label_ammount">Montante</string>
 
+
+    <string name="label_notification" translatable="false">Notificação</string>
+    <string name="label_employee" translatable="false">Funcionário</string>
+    <string name="label_employee_report" translatable="false">Relatorio</string>
+    <string name="label_employee_report_description" translatable="false">Descrição da situação</string>
+    <string name="label_employee_report_status" translatable="false">Estado avaria</string>
+    <string name="label_employee_invoice_read" translatable="false">Leitura contador</string>
+    <string name="label_month" translatable="false">Mês</string>
+
     <!-- TODO: Remove or change this placeholder text -->
 
 
