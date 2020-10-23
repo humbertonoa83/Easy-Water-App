@@ -37,6 +37,7 @@ import hp.com.planoalimentar.easy_water_app.breakdown.BreakdownFragment;
 import hp.com.planoalimentar.easy_water_app.client.ClientBean;
 import hp.com.planoalimentar.easy_water_app.client.datas.ClientDataFragment;
 import hp.com.planoalimentar.easy_water_app.client.routes.ClientRoutes;
+import hp.com.planoalimentar.easy_water_app.employee.EmployeeReport;
 import hp.com.planoalimentar.easy_water_app.info.About;
 import hp.com.planoalimentar.easy_water_app.invoice.InvoiceView;
 import hp.com.planoalimentar.easy_water_app.payments.Payments;
@@ -127,6 +128,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.add_billing:
                 fragmentClass = InvoiceView.class;
+                break;
+            case R.id.employee_report:
+                fragmentClass = EmployeeReport.class;
                 break;
             case R.id.info_about:
                 fragmentClass = About.class;
