@@ -12,6 +12,7 @@ import com.android.volley.error.VolleyError;
 import com.android.volley.request.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -43,6 +44,15 @@ public class ApiRequest {
 
                         if(callback!=null) {
                             callback.responce(response.toString());
+                            try {
+
+                                String token = response.getString("refreshtoken");
+                                if(token!= null || token!= "")
+                                    storePreferences.storeToken(token);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
                         }
                     }
                 }, new Response.ErrorListener() {
@@ -51,6 +61,7 @@ public class ApiRequest {
             public void onErrorResponse(VolleyError error) {
                 if(callback!=null) {
                     callback.responce(error.toString());
+
                 }
             }
         }) {
@@ -88,6 +99,14 @@ public class ApiRequest {
 
                 if(callback!=null) {
                     callback.responce(response.toString());
+                    try {
+
+                        String token = response.getString("refreshtoken");
+                        if(token!= null || token!= "")
+                            storePreferences.storeToken(token);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }, new Response.ErrorListener() {
