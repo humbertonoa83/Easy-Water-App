@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import hp.com.planoalimentar.easy_water_app.R;
 import hp.com.planoalimentar.easy_water_app.client.ClientBean;
+import hp.com.planoalimentar.easy_water_app.client.adress.ClientAddress;
+import hp.com.planoalimentar.easy_water_app.client.document.ClientDocumentBean;
 
 /**
  * This is a product created by AEISUTC Team on
@@ -30,6 +32,8 @@ public class ClientDocumentFragment extends Fragment {
     private FragmentTransaction fragmentTransaction;
     private Bundle bundle;
     private ClientBean clientBean;
+    private ClientDocumentBean clientdocument;
+    private ClientAddress clientAddress;
     private View view;
 
     public ClientDocumentFragment () {
@@ -74,6 +78,8 @@ public class ClientDocumentFragment extends Fragment {
 
         bundle = this.getArguments();
         clientBean = (ClientBean) bundle.getSerializable("client");
+        clientdocument = (ClientDocumentBean) bundle.getSerializable("clientdocument");
+        clientAddress = (ClientAddress) bundle.getSerializable("clientadress");
 
         txt_document = view.findViewById(R.id.txt_document);
         txt_issue_date = view.findViewById(R.id.txt_issue_date);
@@ -81,8 +87,11 @@ public class ClientDocumentFragment extends Fragment {
         txt_issue_place = view.findViewById(R.id.txt_issue_place);
         txt_address = view.findViewById(R.id.txt_address);
 
-        txt_document.setText(clientBean.getDocument_type());
-        txt_address.setText(clientBean.getAdress());
+        txt_document.setText(clientdocument.getDocument_type());
+        txt_issue_date.setText(clientdocument.getIssue_date());
+        txt_valid_date.setText(clientdocument.getExpiration_date());
+        txt_issue_place.setText(clientdocument.getIssue_place());
+        txt_address.setText(clientAddress.getProvince()+", "+clientAddress.getNeighborhood());
         //txt_issue_date.setText(clientBean.get); Não implementado
     }
 }

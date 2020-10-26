@@ -23,6 +23,7 @@ import hp.com.planoalimentar.easy_water_app.api.statics.Constants;
 import hp.com.planoalimentar.easy_water_app.client.routes.ClientRoutes;
 import hp.com.planoalimentar.easy_water_app.init.MainActivity;
 import hp.com.planoalimentar.easy_water_app.store.preferences.StorePreferences;
+import hp.com.planoalimentar.easy_water_app.user.roles.Roles;
 import hp.com.planoalimentar.easy_water_app.user.routes.UserLoginRoutes;
 
 /**
@@ -85,13 +86,16 @@ public class LoginActivity extends AppCompatActivity {
 
     private void parseData (String responce) {
         try {
-            System.out.println("Response "+responce);
             JSONObject jsonObject = new JSONObject(responce);
             if(jsonObject.getBoolean(Constants.SUCCESS)){
                 String token = jsonObject.getString(Constants.TOKEN);
+                String role = jsonObject.getString("role");
                 storePreferences.setLoggedIn();
-                System.out.println("Token: "+token);
                 storePreferences.storeToken(token);
+                storePreferences.storeRole(role);
+                if(role.equals(Roles.CLIENT.getName())){
+                    storePreferences.storeClientId(jsonObject.getString("clientID"));
+                }
 
                 intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);

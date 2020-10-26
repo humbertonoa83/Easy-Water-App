@@ -10,7 +10,10 @@ public class Constants {
     //Sucess name comming from API
     public static String SUCCESS = "success";
 
-    //Token name coming fromAPI
+    //Token name coming from API
     public static String TOKEN = "token";
+
+    //Role coming from API
+    public static String ROLE = "role";
 
 }

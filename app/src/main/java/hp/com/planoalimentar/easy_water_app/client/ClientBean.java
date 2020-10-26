@@ -13,16 +13,9 @@ public class ClientBean implements Serializable {
     private String name;
     private String email;
     private String surname;
-    private String document_type;
-    private String document_name;
-    private String telefone;
+    private String telephone;
     private String gender;
-    private String adress;
     private String nationality;
-    private String country;
-    private String counter;
-    private String client_type;
-    private String counter_id;
 
 
     public ClientBean(){}
@@ -57,26 +50,6 @@ public class ClientBean implements Serializable {
         this.surname = surname;
     }
 
-    public String getDocument_type () {
-
-        return document_type;
-    }
-
-    public void setDocument_type (String document_type) {
-
-        this.document_type = document_type;
-    }
-
-    public String getDocument_name () {
-
-        return document_name;
-    }
-
-    public void setDocument_name (String document_name) {
-
-        this.document_name = document_name;
-    }
-
     public String getEmail () {
 
         return email;
@@ -87,14 +60,14 @@ public class ClientBean implements Serializable {
         this.email = email;
     }
 
-    public String getTelefone () {
+    public String getTelephone () {
 
-        return telefone;
+        return telephone;
     }
 
-    public void setTelefone (String telefone) {
+    public void setTelephone (String telephone) {
 
-        this.telefone = telefone;
+        this.telephone = telephone;
     }
 
     public String getGender () {
@@ -107,16 +80,6 @@ public class ClientBean implements Serializable {
         this.gender = gender;
     }
 
-    public String getAdress () {
-
-        return adress;
-    }
-
-    public void setAdress (String adress) {
-
-        this.adress = adress;
-    }
-
     public String getNationality () {
 
         return nationality;
@@ -127,49 +90,4 @@ public class ClientBean implements Serializable {
         this.nationality = nationality;
     }
 
-    public String getCountry () {
-
-        return country;
-    }
-
-    public void setCountry (String country) {
-
-        this.country = country;
-    }
-
-    public String getCounter () {
-
-        return counter;
-    }
-
-    public void setCounter (String counter) {
-
-        this.counter = counter;
-    }
-
-    public String getClient_type () {
-
-        return client_type;
-    }
-
-    public void setClient_type (String client_type) {
-
-        this.client_type = client_type;
-    }
-
-    public String getCounter_id () {
-
-        return counter_id;
-    }
-
-    public void setCounter_id (String counter_id) {
-
-        this.counter_id = counter_id;
-    }
-
-    @Override
-    public String toString () {
-
-        return "ClientBean{" + "id='" + id + '\'' + ", name='" + name + '\'' + ", email='" + email + '\'' + ", surname='" + surname + '\'' + ", document_type='" + document_type + '\'' + ", document_name='" + document_name + '\'' + ", telefone='" + telefone + '\'' + ", gender='" + gender + '\'' + ", adress='" + adress + '\'' + ", nationality='" + nationality + '\'' + ", country='" + country + '\'' + ", counter='" + counter + '\'' + ", client_type='" + client_type + '\'' + ", counter_id='" + counter_id + '\'' + '}';
-    }
 }

@@ -1,10 +1,13 @@
 package hp.com.planoalimentar.easy_water_app.init;
 
+import android.app.role.RoleManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
@@ -35,7 +38,9 @@ import hp.com.planoalimentar.easy_water_app.api.statics.Constants;
 import hp.com.planoalimentar.easy_water_app.auth.LoginActivity;
 import hp.com.planoalimentar.easy_water_app.breakdown.BreakdownFragment;
 import hp.com.planoalimentar.easy_water_app.client.ClientBean;
+import hp.com.planoalimentar.easy_water_app.client.adress.ClientAddress;
 import hp.com.planoalimentar.easy_water_app.client.datas.ClientDataFragment;
+import hp.com.planoalimentar.easy_water_app.client.document.ClientDocumentBean;
 import hp.com.planoalimentar.easy_water_app.client.routes.ClientRoutes;
 import hp.com.planoalimentar.easy_water_app.employee.EmployeeReport;
 import hp.com.planoalimentar.easy_water_app.info.About;
@@ -44,6 +49,7 @@ import hp.com.planoalimentar.easy_water_app.payments.Payments;
 import hp.com.planoalimentar.easy_water_app.client.datas.profile.ProfileFragment;
 import hp.com.planoalimentar.easy_water_app.recharger.BuyRecharger;
 import hp.com.planoalimentar.easy_water_app.store.preferences.StorePreferences;
+import hp.com.planoalimentar.easy_water_app.user.roles.Roles;
 import hp.com.planoalimentar.easy_water_app.user.routes.UserLoginRoutes;
 
 /**
@@ -61,8 +67,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private JSONObject jsonObject;
     private StorePreferences storePreferences;
     private ClientBean client;
+    private ClientDocumentBean clientDocument;
+    private ClientAddress clientAddress;
     private TextView txtUsername;
     private String token;
+    private static boolean HIDE_MENU = false;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -74,24 +83,68 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         init();
 
-        ApiRequest.makeGETRequest(getApplicationContext(), ClientRoutes.getClientInformation("1"), jsonObject, new CallBack() {
+        if(storePreferences.getRole().equals(Roles.CLIENT.getName())) {
+            ApiRequest.makeGETRequest(getApplicationContext(), ClientRoutes.getClientInformation(storePreferences.getClientId()), jsonObject, new CallBack() {
 
-            @Override
-            public void responce (String responce) {
-                parseInformation(responce);
-            }
-        });
+                @Override
+                public void responce (String responce) {
 
+                    parseInformation(responce);
+                }
+            });
+        }
+
+    }
+
+    private void hideMenus (Menu menu) {
+        if(storePreferences.getRole().equals(Roles.CLIENT.getName())){
+            MenuItem employee_report = menu.findItem(R.id.employee_report);
+            employee_report.setVisible(false);
+            MenuItem employee_invoice = menu.findItem(R.id.employee_invoice);
+            employee_invoice.setVisible(false);
+            MenuItem employee = menu.findItem(R.id.employee);
+            employee.setVisible(false);
+            MenuItem notification = menu.findItem(R.id.notification);
+            notification.setVisible(false);
+        }else{
+            MenuItem mydatas = menu.findItem(R.id.mydatas);
+            mydatas.setVisible(false);
+            MenuItem breakdown = menu.findItem(R.id.breakdown);
+            breakdown.setVisible(false);
+            MenuItem create_recharger = menu.findItem(R.id.create_recharger);
+            create_recharger.setVisible(false);
+            MenuItem second_copy = menu.findItem(R.id.second_copy);
+            second_copy.setVisible(false);
+            MenuItem add = menu.findItem(R.id.add);
+            add.setVisible(false);
+        }
 
     }
 
     private void parseInformation (String responce) {
         try {
+            JSONObject jsonObject = new JSONObject(responce);
+            if(jsonObject.getJSONObject("client") != null) {
+                Gson gson = new GsonBuilder().create();
+                client = gson.fromJson((new JSONObject(responce)).getJSONObject("client").toString(), ClientBean.class);
+                clientDocument = gson.fromJson((new JSONObject(responce)).getJSONObject("clientdocument").toString(), ClientDocumentBean.class);
+                clientAddress = gson.fromJson((new JSONObject(responce)).getJSONObject("clientadress").toString(), ClientAddress.class);
+                storePreferences.storeClientData(client);
+                storePreferences.storeDocument(clientDocument);
+                storePreferences.storeAddress(clientAddress);
 
-            Gson gson = new GsonBuilder().create();
-            client = gson.fromJson((new JSONObject(responce)).getJSONObject("client").toString(), ClientBean.class);
+            }else{
+                client = storePreferences.getClientData();
+                clientDocument = storePreferences.getDocument();
+                clientAddress = storePreferences.getAddress();
+
+            }
+
+
         } catch (JSONException e) {
-            e.printStackTrace();
+            client = storePreferences.getClientData();
+            clientDocument = storePreferences.getDocument();
+            clientAddress = storePreferences.getAddress();
         }
 
     }
@@ -182,6 +235,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Bundle bundle = new Bundle();
         bundle.putSerializable("client", client);
+        bundle.putSerializable("clientdocument", clientDocument);
+        bundle.putSerializable("clientadress", clientAddress);
         fragment.setArguments(bundle);
 
         // Insert the fragment by replacing any existing fragment
@@ -245,6 +300,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toogle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
+        Menu menu = navigationView.getMenu();
+        hideMenus(menu);
 
     }
 

@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import hp.com.planoalimentar.easy_water_app.R;
 import hp.com.planoalimentar.easy_water_app.client.ClientBean;
+import hp.com.planoalimentar.easy_water_app.client.adress.ClientAddress;
+import hp.com.planoalimentar.easy_water_app.client.document.ClientDocumentBean;
 
 /**
  * This is a product created by AEISUTC Team on
@@ -26,6 +28,7 @@ public class ClientInformationFragment extends Fragment {
     private TextView txtClientSurname;
     private TextView txtGender;
     private TextView txt_client_nacionality;
+    private ClientDocumentBean clientdocument;
     private View view;
     private Bundle bundle;
     private ClientBean clientBean;

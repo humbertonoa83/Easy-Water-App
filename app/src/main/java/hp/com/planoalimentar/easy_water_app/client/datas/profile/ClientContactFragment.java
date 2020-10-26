@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import hp.com.planoalimentar.easy_water_app.R;
 import hp.com.planoalimentar.easy_water_app.client.ClientBean;
+import hp.com.planoalimentar.easy_water_app.client.document.ClientDocumentBean;
 
 /**
  * This is a product created by AEISUTC Team on
@@ -29,6 +30,7 @@ public class ClientContactFragment extends Fragment {
     private View view;
     private Bundle bundle;
     private ClientBean clientBean;
+    private ClientDocumentBean clientdocument;
 
     public ClientContactFragment () {
         // Required empty public constructor
@@ -98,13 +100,12 @@ public class ClientContactFragment extends Fragment {
 
         bundle = this.getArguments();
         clientBean = (ClientBean) bundle.getSerializable("client");
+        clientdocument = (ClientDocumentBean) bundle.getSerializable("clientdocument");
 
         txtEmail = view.findViewById(R.id.txt_email);
         txtContact = view.findViewById(R.id.txt_tel);
 
         txtEmail.setText(clientBean.getEmail());
-        txtContact.setText(clientBean.getTelefone());
-
-        System.out.println("Olaaaaa   "+clientBean.toString());
+        txtContact.setText(clientBean.getTelephone());
     }
 }
