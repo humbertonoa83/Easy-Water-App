@@ -86,4 +86,12 @@
     <string name="recharger_code">Recharger code</string>
     <string name="label_reference">Reference</string>
     <string name="label_ammount">" Amount"</string>
+    <string name="label_notification" translatable="false">Notification</string>
+    <string name="label_employee" translatable="false">Employee</string>
+    <string name="label_employee_report" translatable="false">Report</string>
+    <string name="label_employee_report_description" translatable="false">Problem Description</string>
+    <string name="label_employee_report_status" translatable="false">Breakdown status</string>
+    <string name="label_employee_invoice_read" translatable="false">Accountant reading</string>
+    <string name="label_month" translatable="false">Month</string>
+    <string name="label_cliente_surname" translatable="false">Client surname</string>
 </resources>
