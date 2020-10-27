@@ -36,7 +36,7 @@
     <string name="label_block">Quarteirão</string>
     <string name="label_address">Endereço</string>
     <string name="label_client_add" translatable="false">Registro</string>
-    <string name="label_cliente_surname" translatable="false">Apelido do cliente</string>
+    <string name="label_cliente_surname">Apelido do cliente</string>
     <string name="label_buy_recharger">Comprar recarga</string>
     <string name="label_amount_recharger">Insira o valor da recarga</string>
     <string name="label_payment_method">Método de pagamento</string>
@@ -107,13 +107,13 @@
     <string name="label_ammount">Montante</string>
 
 
-    <string name="label_notification" translatable="false">Notificação</string>
-    <string name="label_employee" translatable="false">Funcionário</string>
-    <string name="label_employee_report" translatable="false">Relatorio</string>
-    <string name="label_employee_report_description" translatable="false">Descrição da situação</string>
-    <string name="label_employee_report_status" translatable="false">Estado avaria</string>
-    <string name="label_employee_invoice_read" translatable="false">Leitura contador</string>
-    <string name="label_month" translatable="false">Mês</string>
+    <string name="label_notification">Notificação</string>
+    <string name="label_employee">Funcionário</string>
+    <string name="label_employee_report">Relatorio</string>
+    <string name="label_employee_report_description">Descrição da situação</string>
+    <string name="label_employee_report_status">Estado avaria</string>
+    <string name="label_employee_invoice_read">Leitura contador</string>
+    <string name="label_month">Mês</string>
     <string name="label_version" translatable="false">Version </string>
     <string name="label_version_number" translatable="false">1.0.20</string>
     <string name="label_powered_by" translatable="false">Powered by: AEISUTC</string>
