@@ -132,4 +132,10 @@ public class EmployeeBean implements Serializable {
 
         this.employeeTypeName = employeeTypeName;
     }
+
+    @Override
+    public String toString () {
+
+        return "EmployeeBean{" + "id='" + id + '\'' + ", name='" + name + '\'' + ", surname='" + surname + '\'' + ", document_type='" + document_type + '\'' + ", document_name='" + document_name + '\'' + ", email='" + email + '\'' + ", telefone='" + telefone + '\'' + ", gender='" + gender + '\'' + ", country='" + country + '\'' + ", nationality='" + nationality + '\'' + ", employeeTypeName='" + employeeTypeName + '\'' + '}';
+    }
 }

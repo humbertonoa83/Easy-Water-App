@@ -45,6 +45,7 @@ import hp.com.planoalimentar.easy_water_app.client.routes.ClientRoutes;
 import hp.com.planoalimentar.easy_water_app.employee.EmployeeBean;
 import hp.com.planoalimentar.easy_water_app.employee.EmployeeInvoice;
 import hp.com.planoalimentar.easy_water_app.employee.EmployeeReport;
+import hp.com.planoalimentar.easy_water_app.employee.routes.EmployeeRoutes;
 import hp.com.planoalimentar.easy_water_app.info.About;
 import hp.com.planoalimentar.easy_water_app.invoice.InvoicePayment;
 import hp.com.planoalimentar.easy_water_app.invoice.InvoiceView;
@@ -74,7 +75,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ClientAddress clientAddress;
     private TextView txtUsername;
     private String token;
-    private static boolean HIDE_MENU = false;
     private EmployeeBean employee;
 
     @Override
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
             });
         }else{
-            ApiRequest.makeGETRequest(getApplicationContext(), ClientRoutes.getClientInformation(storePreferences.getClientId()), jsonObject, new CallBack() {
+            ApiRequest.makeGETRequest(getApplicationContext(), EmployeeRoutes.getEmployeeInformation(storePreferences.getEmployeeid()), jsonObject, new CallBack() {
 
                 @Override
                 public void responce (String responce) {
@@ -158,6 +158,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             client = storePreferences.getClientData();
             clientDocument = storePreferences.getDocument();
             clientAddress = storePreferences.getAddress();
+        }finally {
+            txtUsername.setText(client.getName());
         }
 
     }
@@ -170,7 +172,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 employee = gson.fromJson((new JSONObject(responce)).getJSONObject("employee").toString(), EmployeeBean.class);
                 clientDocument = gson.fromJson((new JSONObject(responce)).getJSONObject("employeedocument").toString(), ClientDocumentBean.class);
                 clientAddress = gson.fromJson((new JSONObject(responce)).getJSONObject("employeeaddress").toString(), ClientAddress.class);
-                storePreferences.storeClientData(client);
+                storePreferences.storeEmployee(employee);
                 storePreferences.storeDocument(clientDocument);
                 storePreferences.storeAddress(clientAddress);
 
@@ -186,6 +188,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             employee = storePreferences.getEmployee();
             clientDocument = storePreferences.getDocument();
             clientAddress = storePreferences.getAddress();
+        }finally {
+            txtUsername.setText(employee.getName());
         }
 
     }
@@ -278,10 +282,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         Bundle bundle = new Bundle();
-        if(storePreferences.getRole() == Roles.CLIENT.getName()){
+        if(storePreferences.getRole().equals(Roles.CLIENT.getName())){
             bundle.putSerializable("client", client);
         }else{
             bundle.putSerializable("employee", employee);
+            System.out.println("Employee "+employee.toString());
         }
 
         bundle.putSerializable("document", clientDocument);
@@ -304,6 +309,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void logout () {
         storePreferences.forceLoggout();
         JSONObject paremeters = new JSONObject();
+        try {
+            paremeters.put("token", storePreferences.getToken());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         ApiRequest.makePOSTRequest(getApplicationContext(), UserLoginRoutes.makeLogout(), paremeters,new CallBack(){
 
@@ -339,8 +349,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         storePreferences = new StorePreferences(getApplicationContext());
         token = storePreferences.getToken();
-        //txtUsername = findViewById(R.id.username);
-        //txtUsername.setText(storePreferences.getUsername());
+        View headerView = navigationView.getHeaderView(0);
+        txtUsername = (TextView) (navigationView.getHeaderView(0)).findViewById(R.id.username);
 
         setSupportActionBar(toolbar);
 

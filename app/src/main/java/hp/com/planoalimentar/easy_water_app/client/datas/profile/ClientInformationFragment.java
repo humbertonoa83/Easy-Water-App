@@ -88,9 +88,10 @@ public class ClientInformationFragment extends Fragment {
         txtGender = view.findViewById(R.id.txt_client_gender);
         txt_client_nacionality = view.findViewById(R.id.txt_client_nacionality);
         txtClientSurname = view.findViewById(R.id.txt_client_surname);
-        System.out.println("Role "+storePreferences.getRole()+" "+Roles.CLIENT.getName());
+
         if(storePreferences.getRole().equals(Roles.CLIENT.getName())){
             clientBean = (ClientBean) bundle.getSerializable("client");
+            assert clientBean != null;
             txtGender.setText(clientBean.getGender());
             txtClientName.setText(clientBean.getName());
             txt_client_nacionality.setText(clientBean.getNationality());
@@ -98,6 +99,7 @@ public class ClientInformationFragment extends Fragment {
 
         }else{
             employee = (EmployeeBean) bundle.getSerializable("employee");
+            assert employee != null;
             txtGender.setText(employee.getGender());
             txtClientName.setText(employee.getName());
             txt_client_nacionality.setText(employee.getNationality());
