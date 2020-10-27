@@ -24,6 +24,11 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -31,6 +36,7 @@ import com.google.gson.GsonBuilder;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import hp.com.planoalimentar.easy_water_app.R;
 import hp.com.planoalimentar.easy_water_app.api.statics.ApiRequest;
 import hp.com.planoalimentar.easy_water_app.api.statics.CallBack;
@@ -53,6 +59,7 @@ import hp.com.planoalimentar.easy_water_app.payments.Payments;
 import hp.com.planoalimentar.easy_water_app.client.datas.profile.ProfileFragment;
 import hp.com.planoalimentar.easy_water_app.recharger.BuyRecharger;
 import hp.com.planoalimentar.easy_water_app.store.preferences.StorePreferences;
+import hp.com.planoalimentar.easy_water_app.user.UserBean;
 import hp.com.planoalimentar.easy_water_app.user.roles.Roles;
 import hp.com.planoalimentar.easy_water_app.user.routes.UserLoginRoutes;
 
@@ -76,6 +83,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private TextView txtUsername;
     private String token;
     private EmployeeBean employee;
+    private UserBean user;
+    private CircleImageView profileImage;
+
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -348,9 +358,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         jsonObject = new JSONObject();
 
         storePreferences = new StorePreferences(getApplicationContext());
+        user = storePreferences.getUser();
         token = storePreferences.getToken();
-        View headerView = navigationView.getHeaderView(0);
         txtUsername = (TextView) (navigationView.getHeaderView(0)).findViewById(R.id.username);
+        profileImage = (CircleImageView)(navigationView.getHeaderView(0)).findViewById(R.id.profile_picture);
+
+        Glide.with(getApplicationContext()).load(user.getAvatar()).into(new SimpleTarget <GlideDrawable>() {
+            @Override
+            public void onResourceReady(GlideDrawable resource, GlideAnimation <? super GlideDrawable> glideAnimation) {
+                profileImage.setImageDrawable(resource);
+            }
+        });
 
         setSupportActionBar(toolbar);
 

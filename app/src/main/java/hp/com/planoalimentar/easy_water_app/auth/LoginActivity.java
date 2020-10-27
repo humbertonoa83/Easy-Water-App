@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,9 +22,11 @@ import hp.com.planoalimentar.easy_water_app.R;
 import hp.com.planoalimentar.easy_water_app.api.statics.ApiRequest;
 import hp.com.planoalimentar.easy_water_app.api.statics.CallBack;
 import hp.com.planoalimentar.easy_water_app.api.statics.Constants;
+import hp.com.planoalimentar.easy_water_app.client.document.ClientDocumentBean;
 import hp.com.planoalimentar.easy_water_app.client.routes.ClientRoutes;
 import hp.com.planoalimentar.easy_water_app.init.MainActivity;
 import hp.com.planoalimentar.easy_water_app.store.preferences.StorePreferences;
+import hp.com.planoalimentar.easy_water_app.user.UserBean;
 import hp.com.planoalimentar.easy_water_app.user.roles.Roles;
 import hp.com.planoalimentar.easy_water_app.user.routes.UserLoginRoutes;
 
@@ -91,11 +95,14 @@ public class LoginActivity extends AppCompatActivity {
         try {
             JSONObject jsonObject = new JSONObject(responce);
             if(jsonObject.getBoolean(Constants.SUCCESS)){
+                Gson gson = new GsonBuilder().create();
+
                 String token = jsonObject.getString(Constants.TOKEN);
                 String role = jsonObject.getString("role");
                 storePreferences.setLoggedIn();
                 storePreferences.storeToken(token);
                 storePreferences.storeRole(role);
+                storePreferences.storeUser(gson.fromJson((new JSONObject(responce)).getJSONObject("user").toString(), UserBean.class));
                 if(role.equals(Roles.CLIENT.getName())){
                     storePreferences.storeClientId(jsonObject.getString("clientID"));
                 }else{

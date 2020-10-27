@@ -47,4 +47,7 @@ dependencies {
 
     //Gson
     implementation 'com.google.code.gson:gson:2.8.6'
+
+    //Glide to Download photo
+    implementation 'com.github.bumptech.glide:glide:3.5.2'
 }
