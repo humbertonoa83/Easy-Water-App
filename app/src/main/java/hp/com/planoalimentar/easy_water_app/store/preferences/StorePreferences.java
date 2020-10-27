@@ -94,6 +94,17 @@ public class StorePreferences {
         return sharedPreferences.getBoolean(LOGED, false);
     }
 
+    /**
+     * Force Loggout
+     *
+     * */
+    public void forceLoggout(){
+        SharedPreferences.Editor editor =  sharedPreferences.edit();
+        editor.putBoolean(LOGED, false);
+        editor.commit();
+        editor.apply();
+    }
+
     public void setLoggedIn(){
         SharedPreferences.Editor editor =  sharedPreferences.edit();
         editor.putBoolean(LOGED, true);
@@ -276,6 +287,18 @@ public class StorePreferences {
 
     public String getClientId(){
         return sharedPreferences.getString(CLIENTID, "");
+    }
+
+    public void storeEmployeeId(String employeeId){
+        SharedPreferences.Editor editor =  sharedPreferences.edit();
+        editor.putString(EMPLOYEEID, employeeId);
+
+        editor.commit();
+        editor.apply();
+    }
+
+    public String getEmployeeid(){
+        return sharedPreferences.getString(EMPLOYEEID, "");
     }
 
     public void storeDocument(ClientDocumentBean document){

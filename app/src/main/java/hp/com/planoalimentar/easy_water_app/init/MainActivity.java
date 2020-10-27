@@ -42,6 +42,7 @@ import hp.com.planoalimentar.easy_water_app.client.adress.ClientAddress;
 import hp.com.planoalimentar.easy_water_app.client.datas.ClientDataFragment;
 import hp.com.planoalimentar.easy_water_app.client.document.ClientDocumentBean;
 import hp.com.planoalimentar.easy_water_app.client.routes.ClientRoutes;
+import hp.com.planoalimentar.easy_water_app.employee.EmployeeBean;
 import hp.com.planoalimentar.easy_water_app.employee.EmployeeReport;
 import hp.com.planoalimentar.easy_water_app.info.About;
 import hp.com.planoalimentar.easy_water_app.invoice.InvoiceView;
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private TextView txtUsername;
     private String token;
     private static boolean HIDE_MENU = false;
+    private EmployeeBean employee;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -90,6 +92,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 public void responce (String responce) {
 
                     parseInformation(responce);
+                }
+            });
+        }else{
+            ApiRequest.makeGETRequest(getApplicationContext(), ClientRoutes.getClientInformation(storePreferences.getClientId()), jsonObject, new CallBack() {
+
+                @Override
+                public void responce (String responce) {
+
+                    parseInformationEmployee(responce);
                 }
             });
         }
@@ -143,6 +154,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } catch (JSONException e) {
             client = storePreferences.getClientData();
+            clientDocument = storePreferences.getDocument();
+            clientAddress = storePreferences.getAddress();
+        }
+
+    }
+
+    private void parseInformationEmployee (String responce) {
+        try {
+            JSONObject jsonObject = new JSONObject(responce);
+            if(jsonObject.getJSONObject("employee") != null) {
+                Gson gson = new GsonBuilder().create();
+                employee = gson.fromJson((new JSONObject(responce)).getJSONObject("employee").toString(), EmployeeBean.class);
+                clientDocument = gson.fromJson((new JSONObject(responce)).getJSONObject("employeedocument").toString(), ClientDocumentBean.class);
+                clientAddress = gson.fromJson((new JSONObject(responce)).getJSONObject("employeeaddress").toString(), ClientAddress.class);
+                storePreferences.storeClientData(client);
+                storePreferences.storeDocument(clientDocument);
+                storePreferences.storeAddress(clientAddress);
+
+            }else{
+                employee = storePreferences.getEmployee();
+                clientDocument = storePreferences.getDocument();
+                clientAddress = storePreferences.getAddress();
+
+            }
+
+
+        } catch (JSONException e) {
+            employee = storePreferences.getEmployee();
             clientDocument = storePreferences.getDocument();
             clientAddress = storePreferences.getAddress();
         }
@@ -234,9 +273,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         Bundle bundle = new Bundle();
-        bundle.putSerializable("client", client);
-        bundle.putSerializable("clientdocument", clientDocument);
-        bundle.putSerializable("clientadress", clientAddress);
+        if(storePreferences.getRole() == Roles.CLIENT.getName()){
+            bundle.putSerializable("client", client);
+        }else{
+            bundle.putSerializable("employee", employee);
+        }
+
+        bundle.putSerializable("document", clientDocument);
+        bundle.putSerializable("address", clientAddress);
+
         fragment.setArguments(bundle);
 
         // Insert the fragment by replacing any existing fragment
@@ -252,7 +297,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void logout () {
-
+        storePreferences.forceLoggout();
         JSONObject paremeters = new JSONObject();
 
         ApiRequest.makePOSTRequest(getApplicationContext(), UserLoginRoutes.makeLogout(), paremeters,new CallBack(){

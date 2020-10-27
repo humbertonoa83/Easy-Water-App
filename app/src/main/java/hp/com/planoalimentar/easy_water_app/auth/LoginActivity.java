@@ -95,6 +95,8 @@ public class LoginActivity extends AppCompatActivity {
                 storePreferences.storeRole(role);
                 if(role.equals(Roles.CLIENT.getName())){
                     storePreferences.storeClientId(jsonObject.getString("clientID"));
+                }else{
+                    storePreferences.storeEmployeeId(jsonObject.getString("employeeID"));
                 }
 
                 intent = new Intent(getApplicationContext(), MainActivity.class);

@@ -14,6 +14,9 @@ import android.widget.TextView;
 import hp.com.planoalimentar.easy_water_app.R;
 import hp.com.planoalimentar.easy_water_app.client.ClientBean;
 import hp.com.planoalimentar.easy_water_app.client.document.ClientDocumentBean;
+import hp.com.planoalimentar.easy_water_app.employee.EmployeeBean;
+import hp.com.planoalimentar.easy_water_app.store.preferences.StorePreferences;
+import hp.com.planoalimentar.easy_water_app.user.roles.Roles;
 
 /**
  * This is a product created by AEISUTC Team on
@@ -30,7 +33,8 @@ public class ClientContactFragment extends Fragment {
     private View view;
     private Bundle bundle;
     private ClientBean clientBean;
-    private ClientDocumentBean clientdocument;
+    private StorePreferences storePreferences;
+    private EmployeeBean employee;
 
     public ClientContactFragment () {
         // Required empty public constructor
@@ -97,15 +101,21 @@ public class ClientContactFragment extends Fragment {
     }
 
     private void init(){
-
+        storePreferences = new StorePreferences(getContext());
         bundle = this.getArguments();
-        clientBean = (ClientBean) bundle.getSerializable("client");
-        clientdocument = (ClientDocumentBean) bundle.getSerializable("clientdocument");
+        if(storePreferences.getRole() == Roles.CLIENT.getName()) {
+            clientBean = (ClientBean) bundle.getSerializable("client");
+            txtEmail.setText(clientBean.getEmail());
+            txtContact.setText(clientBean.getTelephone());
+        }else{
+            employee = (EmployeeBean) bundle.getSerializable("employee");
+            txtEmail.setText(employee.getEmail());
+            txtContact.setText(employee.getTelefone());
+        }
 
         txtEmail = view.findViewById(R.id.txt_email);
         txtContact = view.findViewById(R.id.txt_tel);
 
-        txtEmail.setText(clientBean.getEmail());
-        txtContact.setText(clientBean.getTelephone());
+
     }
 }
