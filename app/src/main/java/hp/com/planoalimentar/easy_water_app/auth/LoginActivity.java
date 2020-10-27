@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick (View v) {
+
                 if(isValidCredentials()){
                     try {
                         login();
@@ -63,6 +64,8 @@ public class LoginActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
+
+
             }
         });
     }
