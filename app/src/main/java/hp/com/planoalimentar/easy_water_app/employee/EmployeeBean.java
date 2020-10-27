@@ -1,11 +1,13 @@
 package hp.com.planoalimentar.easy_water_app.employee;
 
+import java.io.Serializable;
+
 /**
  * This is a product created by AEISUTC Team on
  * Matyanga Project concurs
  * Created by humbertonoa83@gmail.com on 26/10/2020.
  */
-public class EmployeeBean {
+public class EmployeeBean implements Serializable {
 
     public String id;
     public String name;

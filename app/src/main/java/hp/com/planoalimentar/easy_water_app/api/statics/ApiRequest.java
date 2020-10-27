@@ -1,7 +1,9 @@
 package hp.com.planoalimentar.easy_water_app.api.statics;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -18,6 +20,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import hp.com.planoalimentar.easy_water_app.auth.LoginActivity;
 import hp.com.planoalimentar.easy_water_app.store.preferences.StorePreferences;
 
 /**
@@ -28,6 +31,8 @@ import hp.com.planoalimentar.easy_water_app.store.preferences.StorePreferences;
 public class ApiRequest {
 
     private static StorePreferences storePreferences;
+    private static String invalidToken = "Invalid token";
+    private static String expredToken = "Token Expired";
 
    /**
     * This method make a post request to the server
@@ -45,14 +50,15 @@ public class ApiRequest {
                         if(callback!=null) {
                             callback.responce(response.toString());
                             try {
-
-                                String token = response.getString("refreshtoken");
-                                if(token!= null || token!= "")
-                                    storePreferences.storeToken(token);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
+                                if(response.getString("message").equals(invalidToken) || response.getString("message").equals(expredToken)) {
+                                    storePreferences.forceLoggout();
+                                    Intent intent = new Intent(context, LoginActivity.class);
+                                    context.startActivity(intent);
+                                }
+                            }catch (Exception $exception){
+                                $exception.printStackTrace();
+                                Toast.makeText(context, "Error occured", Toast.LENGTH_LONG).show();
                             }
-
                         }
                     }
                 }, new Response.ErrorListener() {
@@ -100,12 +106,14 @@ public class ApiRequest {
                 if(callback!=null) {
                     callback.responce(response.toString());
                     try {
-
-                        String token = response.getString("refreshtoken");
-                        if(token!= null || token!= "")
-                            storePreferences.storeToken(token);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                        if(response.getString("message").equals(invalidToken) || response.getString("message").equals(expredToken)) {
+                            storePreferences.forceLoggout();
+                            Intent intent = new Intent(context, LoginActivity.class);
+                            context.startActivity(intent);
+                        }
+                    }catch (Exception $exception){
+                        $exception.printStackTrace();
+                        Toast.makeText(context, "Error occured", Toast.LENGTH_LONG).show();
                     }
                 }
             }

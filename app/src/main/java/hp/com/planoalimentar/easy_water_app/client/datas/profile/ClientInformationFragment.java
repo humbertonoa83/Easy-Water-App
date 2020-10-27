@@ -15,6 +15,9 @@ import hp.com.planoalimentar.easy_water_app.R;
 import hp.com.planoalimentar.easy_water_app.client.ClientBean;
 import hp.com.planoalimentar.easy_water_app.client.adress.ClientAddress;
 import hp.com.planoalimentar.easy_water_app.client.document.ClientDocumentBean;
+import hp.com.planoalimentar.easy_water_app.employee.EmployeeBean;
+import hp.com.planoalimentar.easy_water_app.store.preferences.StorePreferences;
+import hp.com.planoalimentar.easy_water_app.user.roles.Roles;
 
 /**
  * This is a product created by AEISUTC Team on
@@ -28,12 +31,12 @@ public class ClientInformationFragment extends Fragment {
     private TextView txtClientSurname;
     private TextView txtGender;
     private TextView txt_client_nacionality;
-    private ClientDocumentBean clientdocument;
     private View view;
     private Bundle bundle;
     private ClientBean clientBean;
-
+    private StorePreferences storePreferences;
     private FragmentTransaction fragmentTransaction;
+    private EmployeeBean employee;
 
     public ClientInformationFragment () {
         // Required empty public constructor
@@ -79,19 +82,30 @@ public class ClientInformationFragment extends Fragment {
     }
 
     private void init () {
-
+        storePreferences = new StorePreferences(getContext());
         bundle = this.getArguments();
-        clientBean = (ClientBean) bundle.getSerializable("client");
-
         txtClientName = view.findViewById(R.id.txt_client_name);
         txtGender = view.findViewById(R.id.txt_client_gender);
         txt_client_nacionality = view.findViewById(R.id.txt_client_nacionality);
-
-        txtGender.setText(clientBean.getGender());
-        txtClientName.setText(clientBean.getName());
-        txt_client_nacionality.setText(clientBean.getNationality());
-
         txtClientSurname = view.findViewById(R.id.txt_client_surname);
-        txtClientSurname.setText(clientBean.getSurname());
+        System.out.println("Role "+storePreferences.getRole()+" "+Roles.CLIENT.getName());
+        if(storePreferences.getRole().equals(Roles.CLIENT.getName())){
+            clientBean = (ClientBean) bundle.getSerializable("client");
+            txtGender.setText(clientBean.getGender());
+            txtClientName.setText(clientBean.getName());
+            txt_client_nacionality.setText(clientBean.getNationality());
+            txtClientSurname.setText(clientBean.getSurname());
+
+        }else{
+            employee = (EmployeeBean) bundle.getSerializable("employee");
+            txtGender.setText(employee.getGender());
+            txtClientName.setText(employee.getName());
+            txt_client_nacionality.setText(employee.getNationality());
+            txtClientSurname.setText(employee.getSurname());
+        }
+
+
+
+
     }
 }
