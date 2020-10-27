@@ -86,5 +86,13 @@
     <string name="recharger_code">Código de recarga</string>
     <string name="label_ammount">Cantidad</string>
     <string name="label_reference">Referencia</string>
+    <string name="label_month" translatable="false">Mes</string>
+    <string name="label_employee_invoice_read" translatable="false">Lectura de contador</string>
+    <string name="label_employee_report_status" translatable="false">Mal funcionamiento</string>
+    <string name="label_employee_report_description" translatable="false">Descripción del problema</string>
+    <string name="label_employee_report" translatable="false">Reporte</string>
+    <string name="label_employee" translatable="false">Empleado</string>
+    <string name="label_notification" translatable="false">Notificación</string>
+    <string name="label_cliente_surname" translatable="false">Apodo del cliente</string>
 
 </resources>
