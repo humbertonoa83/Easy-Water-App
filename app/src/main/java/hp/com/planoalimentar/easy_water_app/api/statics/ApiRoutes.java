@@ -47,8 +47,14 @@ public enum ApiRoutes implements ApiRoutesInterface{
 
             return Path.getAddress()+"logout/";
         }
-    }
-    ;
+    },
+    EMPLOYEE {
+        @Override
+        public String path () {
+
+            return Path.getAddress()+"employees/";
+        }
+    };
 
 
 

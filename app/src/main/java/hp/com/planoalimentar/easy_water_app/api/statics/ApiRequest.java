@@ -50,12 +50,14 @@ public class ApiRequest {
                         if(callback!=null) {
                             callback.responce(response.toString());
                             try {
-                                if(response.getString("message").equals(invalidToken) || response.getString("message").equals(expredToken)) {
-                                    storePreferences.forceLoggout();
-                                    Intent intent = new Intent(context, LoginActivity.class);
-                                    context.startActivity(intent);
+                                if(response.has("message")) {
+                                    if(response.getString("message").equals(invalidToken) || response.getString("message").equals(expredToken)) {
+                                        storePreferences.forceLoggout();
+                                        Intent intent = new Intent(context, LoginActivity.class);
+                                        context.startActivity(intent);
+                                    }
                                 }
-                            }catch (Exception $exception){
+                            }catch (JSONException $exception){
                                 $exception.printStackTrace();
                                 Toast.makeText(context, "Error occured", Toast.LENGTH_LONG).show();
                             }
@@ -106,12 +108,14 @@ public class ApiRequest {
                 if(callback!=null) {
                     callback.responce(response.toString());
                     try {
-                        if(response.getString("message").equals(invalidToken) || response.getString("message").equals(expredToken)) {
-                            storePreferences.forceLoggout();
-                            Intent intent = new Intent(context, LoginActivity.class);
-                            context.startActivity(intent);
+                        if(response.has("message")) {
+                            if(response.getString("message").equals(invalidToken) || response.getString("message").equals(expredToken)) {
+                                storePreferences.forceLoggout();
+                                Intent intent = new Intent(context, LoginActivity.class);
+                                context.startActivity(intent);
+                            }
                         }
-                    }catch (Exception $exception){
+                    }catch (JSONException $exception){
                         $exception.printStackTrace();
                         Toast.makeText(context, "Error occured", Toast.LENGTH_LONG).show();
                     }

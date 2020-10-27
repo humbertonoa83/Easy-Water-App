@@ -90,4 +90,9 @@ public class ClientBean implements Serializable {
         this.nationality = nationality;
     }
 
+    @Override
+    public String toString () {
+
+        return "ClientBean{" + "id='" + id + '\'' + ", name='" + name + '\'' + ", email='" + email + '\'' + ", surname='" + surname + '\'' + ", telephone='" + telephone + '\'' + ", gender='" + gender + '\'' + ", nationality='" + nationality + '\'' + '}';
+    }
 }

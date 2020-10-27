@@ -103,18 +103,20 @@ public class ClientContactFragment extends Fragment {
     private void init(){
         storePreferences = new StorePreferences(getContext());
         bundle = this.getArguments();
-        if(storePreferences.getRole() == Roles.CLIENT.getName()) {
+        txtEmail = view.findViewById(R.id.txt_email);
+        txtContact = view.findViewById(R.id.txt_tel);
+        if(storePreferences.getRole().equals(Roles.CLIENT.getName())) {
             clientBean = (ClientBean) bundle.getSerializable("client");
+            assert clientBean != null;
             txtEmail.setText(clientBean.getEmail());
             txtContact.setText(clientBean.getTelephone());
         }else{
             employee = (EmployeeBean) bundle.getSerializable("employee");
+            assert employee != null;
             txtEmail.setText(employee.getEmail());
             txtContact.setText(employee.getTelefone());
         }
 
-        txtEmail = view.findViewById(R.id.txt_email);
-        txtContact = view.findViewById(R.id.txt_tel);
 
 
     }
