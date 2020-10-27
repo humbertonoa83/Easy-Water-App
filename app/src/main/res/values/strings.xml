@@ -114,6 +114,11 @@
     <string name="label_employee_report_status" translatable="false">Estado avaria</string>
     <string name="label_employee_invoice_read" translatable="false">Leitura contador</string>
     <string name="label_month" translatable="false">Mês</string>
+    <string name="label_version" translatable="false">Version </string>
+    <string name="label_version_number" translatable="false">1.0.20</string>
+    <string name="label_powered_by" translatable="false">Powered by: AEISUTC</string>
+    <string name="label_copyrigth" translatable="false">Copyright (c) 2020. All rights reserved.</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
 
