@@ -24,6 +24,7 @@ import hp.com.planoalimentar.easy_water_app.api.statics.ApiRequest;
 import hp.com.planoalimentar.easy_water_app.api.statics.CallBack;
 import hp.com.planoalimentar.easy_water_app.api.statics.Constants;
 import hp.com.planoalimentar.easy_water_app.breakdown.routes.BreakdownRoutes;
+import hp.com.planoalimentar.easy_water_app.store.preferences.StorePreferences;
 
 /**
  * This is a product created by AEISUTC Team on
@@ -42,6 +43,7 @@ public class BreakdownFragment extends Fragment {
     private DatePicker picker;
     private Button btn_send;
     private View view;
+    private StorePreferences storePreferences;
 
     public BreakdownFragment () {
         // Required empty public constructor
@@ -66,7 +68,7 @@ public class BreakdownFragment extends Fragment {
                         JSONObject parameters = new JSONObject();
                         parameters.put("reason", txt_breakdown_cause.getText().toString());
                         parameters.put("occurrences_number", txt_breakdown_occur_number.getText().toString());
-                        parameters.put("client_id", 1);
+                        parameters.put("client_id", storePreferences.getClientId());
                         parameters.put("last_occurrences_date",picker.getYear()+ "-"+(picker.getMonth() + 1)+"-"+picker.getDayOfMonth()+" 12:00:00");
                         parameters.put("breakdown_types_id",1);
                         ApiRequest.makePOSTRequest(getContext(), BreakdownRoutes.reportBreakdown(), parameters, new CallBack() {
@@ -117,6 +119,8 @@ public class BreakdownFragment extends Fragment {
         progressDialog = new ProgressDialog(getContext());
 
         picker= view.findViewById(R.id.breakdown_date);
+
+        storePreferences = new StorePreferences(getContext());
     }
 
     private boolean verifyFields(){
