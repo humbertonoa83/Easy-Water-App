@@ -11,7 +11,7 @@ class Path {
      *  API server
      *  just change here
      */
-    private static String address ="http://192.168.137.1/api/";
+    private static String address ="http://easy-water.tk/api/";
 
 
     protected static String getAddress () {

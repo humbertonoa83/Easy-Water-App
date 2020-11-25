@@ -46,26 +46,14 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <DatePicker
                 android:id="@+id/breakdown_date"
                 android:layout_below="@+id/breakdown_cause"
-                android:hint="@string/label_breakdown_date"
-                app:hintAnimationEnabled="true"
-                android:layout_margin="15dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_breakdown_date"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:maxLength="10"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:layout_margin="15dp"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"

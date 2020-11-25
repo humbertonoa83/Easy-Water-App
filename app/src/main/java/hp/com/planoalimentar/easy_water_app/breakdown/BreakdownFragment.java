@@ -1,5 +1,6 @@
 package hp.com.planoalimentar.easy_water_app.breakdown;
 
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -31,15 +33,13 @@ import hp.com.planoalimentar.easy_water_app.breakdown.routes.BreakdownRoutes;
 public class BreakdownFragment extends Fragment {
 
     private TextInputEditText txt_breakdown_cause;
-    private TextInputEditText txt_breakdown_date;
     private TextInputEditText txt_breakdown_description;
     private TextInputEditText txt_breakdown_occur_number;
     private TextInputLayout label_breakdown_cause;
-    private TextInputLayout label_breakdown_date;
     private TextInputLayout label_breakdown_description;
     private TextInputLayout label_breakdown_occur_number;
     private ProgressDialog progressDialog;
-
+    private DatePicker picker;
     private Button btn_send;
     private View view;
 
@@ -67,7 +67,7 @@ public class BreakdownFragment extends Fragment {
                         parameters.put("reason", txt_breakdown_cause.getText().toString());
                         parameters.put("occurrences_number", txt_breakdown_occur_number.getText().toString());
                         parameters.put("client_id", 1);
-                        parameters.put("last_occurrences_date","2020-09-23 05:15:11");
+                        parameters.put("last_occurrences_date",picker.getYear()+ "-"+(picker.getMonth() + 1)+"-"+picker.getDayOfMonth()+" 12:00:00");
                         parameters.put("breakdown_types_id",1);
                         ApiRequest.makePOSTRequest(getContext(), BreakdownRoutes.reportBreakdown(), parameters, new CallBack() {
 
@@ -77,7 +77,6 @@ public class BreakdownFragment extends Fragment {
                                     JSONObject response = new JSONObject(responce);
                                     if(response.getBoolean(Constants.SUCCESS)){
                                         txt_breakdown_cause.setText("");
-                                        txt_breakdown_date.setText("");
                                         txt_breakdown_description.setText("");
                                         txt_breakdown_occur_number.setText("");
                                         Toast.makeText(getContext(), getString(R.string.operation_success), Toast.LENGTH_LONG).show();
@@ -106,18 +105,18 @@ public class BreakdownFragment extends Fragment {
 
     private void init(){
         txt_breakdown_cause = view.findViewById(R.id.txt_breakdown_cause);
-        txt_breakdown_date = view.findViewById(R.id.txt_breakdown_date);
         txt_breakdown_description = view.findViewById(R.id.txt_breakdown_description);
         txt_breakdown_occur_number = view.findViewById(R.id.txt_breakdown_occur_number);
 
         label_breakdown_cause = view.findViewById(R.id.breakdown_cause);
-        label_breakdown_date = view.findViewById(R.id.breakdown_date);
         label_breakdown_description = view.findViewById(R.id.breakdown_description);
         label_breakdown_occur_number = view.findViewById(R.id.breakdown_occur_number);
 
         btn_send = view.findViewById(R.id.btn_send);
 
         progressDialog = new ProgressDialog(getContext());
+
+        picker= view.findViewById(R.id.breakdown_date);
     }
 
     private boolean verifyFields(){
@@ -126,10 +125,6 @@ public class BreakdownFragment extends Fragment {
 
         if(txt_breakdown_cause.getText().toString().isEmpty()){
             label_breakdown_cause.setError(getString(R.string.required_field));
-            isSomethingEmpty =false;
-        }
-        if(txt_breakdown_date.getText().toString().isEmpty()){
-            label_breakdown_date.setError(getString(R.string.required_field));
             isSomethingEmpty =false;
         }
         if(txt_breakdown_description.getText().toString().isEmpty()){
